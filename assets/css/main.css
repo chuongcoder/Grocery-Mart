@@ -52,8 +52,14 @@ table {
   border-spacing: 0;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -62,7 +68,9 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: Gordita, sans-serif;
+  font-family: Lato, sans-serif;
+  color: var(--text-color);
+  background: var(--body-bg);
 }
 
 a {
@@ -74,6 +82,63 @@ button {
   border: none;
   outline: none;
   background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+a,
+img,
+button,
+input,
+label,
+textarea,
+select {
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  border: none;
+}
+
+input,
+textarea {
+  background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 1s 9999s;
+  -webkit-text-fill-color: var(--text-color);
+  caret-color: var(--text-color);
+}
+
+.icon {
+  filter: var(--icon-color);
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+.separate {
+  margin: var(--margin) 0;
+  height: 1px;
+  background: var(--separate-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1295,6 +1360,7 @@ html.dark {
 }
 
 .top-bar {
+  position: relative;
   padding: 30px 0;
 }
 @media (max-width: 991.98px) {
@@ -1329,11 +1395,19 @@ html.dark {
     display: none;
   }
 }
-.navbar__list {
-  gap: 30px;
+.navbar__item:first-child {
+  padding-left: 0;
+}
+.navbar__item:last-child {
+  padding-right: 0;
+}
+.navbar__item:hover .dropdown {
+  display: block;
 }
 .navbar__link {
   gap: 6px;
+  height: 50px;
+  padding: 0 15px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.46;
@@ -1417,6 +1491,30 @@ html.dark {
   .logo__img {
     width: 24px;
   }
+}
+
+.dropdown {
+  position: absolute;
+  padding-top: 54px;
+  left: 0;
+  display: none;
+  width: min(1240px, 100%);
+}
+.dropdown__inner {
+  position: relative;
+  padding: 30px;
+  height: calc(100vh - 158px);
+  border-radius: 20px;
+  background: var(--dropdown-bg-color);
+  box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+}
+.dropdown__inner::before {
+  content: url("../icons/dropdown-arrow.svg");
+  position: absolute;
+  top: -13px;
+  left: var(--arrow-left-pos);
+  translate: -50%;
+  filter: var(--dropdown-arrow-color);
 }
 
 /*# sourceMappingURL=main.css.map */

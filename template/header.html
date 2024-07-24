@@ -1,6 +1,5 @@
 <div class="container">
     <div class="top-bar">
-
         <!-- More on mobile  -->
         <button class="top-bar__more">
             <img
@@ -8,6 +7,11 @@
                 alt=""
                 class="icon top-bar__more-icon"
             />
+            <!--
+                themes for icon on mobile 
+                .icon {
+                filter: var(--icon-color);
+            } -->
         </button>
 
         <!-- Logo  -->
@@ -23,36 +27,63 @@
 
         <!-- Navbar -->
         <nav class="navbar">
-            <ul class="navbar__list">
-                <li>
+            <ul class="navbar__list js-dropdown-list">
+                <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Departments
                         <img
                             src="./assets/icons/arrow-down.svg"
                             alt=""
-                            class="navbar__arrow"
+                            class="navbar__arrow icon"
                         />
+                        <!-- icon: class theme for icon with diference mode  -->
                     </a>
+
+                    <!-- Mega menu  -->
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Quia nihil soluta esse in dignissimos aliquam!
+                            Vitae ut natus, dicta quae libero deleniti ad
+                            cupiditate enim earum vero rerum est quidem.
+                        </div>
+                    </div>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Grocery
                         <img
                             src="./assets/icons/arrow-down.svg"
                             alt=""
-                            class="navbar__arrow"
+                            class="navbar__arrow icon"
                         />
                     </a>
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Quia nihil soluta esse in dignissimos aliquam!
+                            Vitae ut natus, dicta quae libero deleniti ad
+                            cupiditate enim earum vero rerum est quidem.
+                        </div>
+                    </div>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Beauty
                         <img
                             src="./assets/icons/arrow-down.svg"
                             alt=""
-                            class="navbar__arrow"
+                            class="navbar__arrow icon"
                         />
                     </a>
+                    <div class="dropdown">
+                        <div class="dropdown__inner">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Quia nihil soluta esse in dignissimos aliquam!
+                            Vitae ut natus, dicta quae libero deleniti ad
+                            cupiditate enim earum vero rerum est quidem.
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -65,7 +96,7 @@
                     <img
                         src="./assets/icons/search.svg"
                         alt=""
-                        class="top-act__icon"
+                        class="top-act__icon icon"
                     />
                 </button>
             </div>
@@ -76,7 +107,7 @@
                     <img
                         src="./assets/icons/heart.svg"
                         alt=""
-                        class="top-act__icon"
+                        class="top-act__icon icon"
                     />
                     <span class="top-act__title">03</span>
                 </button>
@@ -87,7 +118,7 @@
                     <img
                         src="./assets/icons/buy.svg"
                         alt=""
-                        class="top-act__icon"
+                        class="top-act__icon icon"
                     />
                     <span class="top-act__title">$65.42</span>
                 </button>
@@ -102,6 +133,5 @@
                 />
             </div>
         </div>
-        
     </div>
 </div>
