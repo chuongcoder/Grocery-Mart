@@ -8,6 +8,11 @@
 
 .header {
     background: var(--header-bg-color);
+
+    // them bong do cho screen lg do xuong 
+    @include abstracts.screen(lg) {
+        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
+    }
 }
 
 // cho cac phan tu trong header ngang len
@@ -22,8 +27,9 @@
         padding: 20px 0;
     }
 
-    // mobile
-    @include abstracts.screen(sm) {
+    // mobile (can giua icon)
+    @include abstracts.screen(md) {
+        justify-content: space-between;
         padding: 16px 0;
     }
 
@@ -37,11 +43,12 @@
 }
 
 .navbar {
-    margin-left: 144px;
+    // do margin am 15px (144 -> 129)
+    margin-left: 129px;
 
     // navbar margin left when screen < 1200px 
     @include abstracts.screen(xl) {
-        margin-left: 50px;
+        margin-left: 28px;
     }
 
     // syn: @include name_space.name_mixins {}
@@ -57,13 +64,13 @@
 
     // li 
     &__item {
-        &:first-child {
-            padding-left: 0;
-        }
+        // &:first-child {
+        //     padding-left: 0;
+        // }
 
-        &:last-child {
-            padding-right: 0;
-        }
+        // &:last-child {
+        //     padding-right: 0;
+        // }
 
         &:hover .dropdown {
             display: block;
@@ -95,6 +102,11 @@
     margin-left: auto;
     gap: 20px;
 
+    // can giua icon cho screen md 
+    @include abstracts.screen(md) {
+        margin-left: auto;
+    }
+
     // 3 group: 1btn | 2btn | avatar
     &__group {
         @extend %flexItemCenter;
@@ -118,7 +130,7 @@
     }
 
     &__group--single {
-        // hidden icon search with screen lg (992px)
+        // hidden icon search with screen lg  < (992px)
         @include abstracts.screen(lg) {
             display: none;
         }

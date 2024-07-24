@@ -7,7 +7,11 @@
     // set gap with reponsice lg screen 
     @include abstracts.screen(lg) {
         gap: 10px;
-        margin-left: 39px;
+        margin-left: 40px;
+    }
+
+    @include abstracts.screen(md) {
+        margin-left: auto;
     }
 
     &__title {
