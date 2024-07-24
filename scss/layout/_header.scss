@@ -1,0 +1,142 @@
+@use "../abstracts";
+
+// placeholder variable
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background: var(--header-bg-color);
+}
+
+// cho cac phan tu trong header ngang len
+.top-bar {
+    @extend %flexItemCenter;
+    padding: 30px 0;
+
+    // tablet 
+    @include abstracts.screen(lg) {
+        padding: 20px 0;
+    }
+
+    // mobile
+    @include abstracts.screen(sm) {
+        padding: 16px 0;
+    }
+
+    // hidden icon more on pc 
+    &__more {
+        display: none;
+        @include abstracts.screen(lg) {
+            display: block;
+        }
+    }
+}
+
+.navbar {
+    margin-left: 144px;
+
+    // navbar margin left when screen < 1200px 
+    @include abstracts.screen(xl) {
+        margin-left: 50px;
+    }
+
+    // syn: @include name_space.name_mixins {}
+    // hidden navbar with screen < lg (992px)
+    @include abstracts.screen(lg) {
+        display: none;
+    }
+
+    // ul
+    &__list {
+        @extend %flexItemCenter;
+        gap: 30px;
+    }
+
+    // a
+    &__link {
+        @extend %flexItemCenter;
+
+        gap: 6px;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+
+    //a > img
+    &__arrow {
+        margin-top: 3px;
+    }
+}
+
+// Include btn & avatar
+.top-act {
+    @extend %flexItemCenter;
+    margin-left: auto;
+    gap: 20px;
+
+    // 3 group: 1btn | 2btn | avatar
+    &__group {
+        @extend %flexItemCenter;
+
+        min-width: 50px;
+        height: 50px;
+
+        border-radius: 8px;
+        background: var(--top-act-group-bg-color);
+        box-shadow: 0px 20px 60px 10px var(--header-act-dropdown-shadow);
+
+        // hidden actions on mobile 
+        @include abstracts.screen(sm) {
+            display: none;
+        }
+
+        // hidden 3 group btn and 
+        @include abstracts.screen(md) {
+            display: none;
+        }
+    }
+
+    &__group--single {
+        // hidden icon search with screen lg (992px)
+        @include abstracts.screen(lg) {
+            display: none;
+        }
+    }
+
+    &__group--single &__btn {
+        padding: 13px;
+    }
+
+    // include span and img tag
+    &__btn {
+        padding: 13px 20px;
+        @extend %flexItemCenter;
+
+        gap: 10px;
+    }
+
+    // span
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+
+    // between 2 btn pair
+    &__separate {
+        width: 1px;
+        height: 30px;
+        background: #ededf6;
+    }
+
+    &__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        // -> tag a block -> remove separate bottom
+        display: block;
+    }
+}
