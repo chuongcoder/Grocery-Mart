@@ -29,11 +29,13 @@
 
 // main content
 .top-menu {
+    --main-column-width: 292px;
+    position: relative;
     &__main {
-        width: 292px;
+        width: var(--main-column-width);
         // max-height: calc(min(582px, 100vh - 158px) - 60px);
         // tinh toan de top-menu khi ke thua height dropdown se khong bi troi xuong -> margin am || -60px
-        max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
         // hien thanh cuon (khi height has value absolute )
         overflow-y: auto;
@@ -43,6 +45,11 @@
     // cho icon va content len 1 hang
     display: flex;
     gap: 14px;
+
+    // menu col dang sau mot cai menu col -> css (cai menu col dau -> ko bi css)
+    + .menu-column {
+        margin-top: var(--inner-padding);
+    }
 
     &__icon {
         position: relative;
@@ -86,6 +93,18 @@
         margin-top: 19px;
     }
 
+    // li
+    &__item {
+        &:hover .sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item:hover > &__link {
+            color: #0071dc;
+            font-weight: 500;
+    }
+
     // a
     &__link {
         display: block;
@@ -93,9 +112,21 @@
         font-size: 1.4rem;
         line-height: 1.42;
 
-        &:hover {
-            color: #0071dc;
-            font-weight: 500;
-        }
     }
+}
+
+// content after a tag  
+.sub-menu {
+    // ke theo top-menu 
+    position: absolute;
+    // chua ben trai 292px => dam bao khong che phan noi dung cua phan menu-contain 
+    inset: 0 0 0 var(--main-column-width);
+    padding-left: var(--inner-padding);
+
+    display: none;
+    // hover -> display : grid
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--inner-padding);
+
+    overflow-y: auto;
 }
