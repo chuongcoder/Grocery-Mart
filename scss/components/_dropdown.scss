@@ -31,12 +31,14 @@
 // main content
 .top-menu {
     --main-column-width: 292px;
+    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+
     position: relative;
     &__main {
         width: var(--main-column-width);
         // max-height: calc(min(582px, 100vh - 158px) - 60px);
         // tinh toan de top-menu khi ke thua height dropdown se khong bi troi xuong -> margin am || -60px
-        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+        height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         // hien thanh cuon (khi height has value absolute )
         overflow-y: auto;
@@ -138,4 +140,16 @@
     gap: var(--inner-padding);
 
     overflow-y: auto;
+
+    &--not-main {
+        // loai bo position & inset 
+        position: initial;
+        inset: initial;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // add scrool bar -> set height
+        height: var(--max-inner-height);
+        padding-left: 0;
+    }
 }
