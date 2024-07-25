@@ -157,19 +157,24 @@ function initJsToggle() {
         button.onclick = (e) => {
             e.preventDefault();
 
+            // Neu khong tim thay thuoc tinh target 
             if (!$(target)) {
                 return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
             }
             const isHidden = $(target).classList.contains("hide");
 
             requestAnimationFrame(() => {
+                // hide if show 
                 $(target).classList.toggle("hide", !isHidden);
+                // show if hide 
                 $(target).classList.toggle("show", isHidden);
             });
         };
         document.onclick = function (e) {
             if (!e.target.closest(target)) {
+                // check box(target) hold hide ?
                 const isHidden = $(target).classList.contains("hide");
+                // if box not hide 
                 if (!isHidden) {
                     button.click();
                 }
