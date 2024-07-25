@@ -35,7 +35,7 @@
 
     // hidden icon more on pc 
     &__more {
-        display: none;
+        // display: none;
         @include abstracts.screen(lg) {
             display: block;
         }
@@ -181,17 +181,14 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--header-act-dropdown-shadow);
-
-        // hidden actions on mobile 
-        @include abstracts.screen(sm) {
-            display: none;
-        }
-
-        // hidden 3 group btn and 
-        @include abstracts.screen(md) {
-            display: none;
-        }
     }
+
+
+        // hidden icon heart and cart on tablet and mobile
+    //     @include abstracts.screen(md) {
+    //         // display: none;
+    //     }
+    // }
 
     &__group--single {
         // hidden icon search with screen lg  < (992px)
