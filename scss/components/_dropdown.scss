@@ -1,8 +1,9 @@
+@use "../abstracts";
 .dropdown {
     position: absolute;
     padding-top: 54px;
     left: 0;
-    // display: none;
+    display: none;
     width: min(1240px, 100%);
 
     &__inner {
@@ -48,7 +49,7 @@
 
     // menu col dang sau mot cai menu col -> css (cai menu col dau -> ko bi css)
     + .menu-column {
-        margin-top: var(--inner-padding);
+        margin-top: 22px;
     }
 
     &__icon {
@@ -57,6 +58,11 @@
         width: 36px;
         height: 36px;
         position: relative;
+
+        // hidden icon neu screen xl 
+        @include abstracts.screen(xl) {
+            display: none;
+        }
     }
 
     // cho content chiem het chieu doc
@@ -67,16 +73,17 @@
     &__icon-1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        // dam bao icon khong bi cat xen 
+        object-fit: contain;
     }
 
     &__icon-2 {
         position: absolute;
-        right: 0;
+        right: 0; 
         bottom: 0;
         width: 24px;
         height: 24px;
-        object-fit: cover;
+        object-fit: contain;
         filter: var(--menu-column-icon-color);
     }
 
@@ -95,11 +102,13 @@
 
     // li
     &__item {
-        &:hover .sub-menu {
+        &--active .sub-menu {
             display: grid;
         }
     }
 
+    // modifier(hold tag li alway blue, hover 
+    &__item--active > &__link,
     &__item:hover > &__link {
             color: #0071dc;
             font-weight: 500;
