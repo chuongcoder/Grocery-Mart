@@ -9,20 +9,20 @@
 .header {
     background: var(--header-bg-color);
 
-    // them bong do cho screen lg do xuong 
+    // them bong do cho screen lg do xuong
     @include abstracts.screen(lg) {
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
+        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
     }
 }
 
 // cho cac phan tu trong header ngang len
 .top-bar {
     @extend %flexItemCenter;
-    // Mega menu 
+    // Mega menu
     position: relative;
     padding: 30px 0;
 
-    // tablet 
+    // tablet
     @include abstracts.screen(lg) {
         padding: 20px 0;
     }
@@ -33,7 +33,7 @@
         padding: 16px 0;
     }
 
-    // hidden icon more on pc 
+    // hidden icon more on pc
     &__more {
         // display: none;
         @include abstracts.screen(lg) {
@@ -46,7 +46,7 @@
     // do margin am 15px (144 -> 129)
     margin-left: 129px;
 
-    // navbar margin left when screen < 1200px 
+    // navbar margin left when screen < 1200px
     @include abstracts.screen(xl) {
         margin-left: 28px;
     }
@@ -54,44 +54,55 @@
     // syn: @include name_space.name_mixins {}
     // hidden navbar pc and create new navbar for tablet with screen < lg (992px)
     @include abstracts.screen(lg) {
+        border-radius: 0px 20px 20px 0px;
         position: fixed;
         inset: 0 50% 0 0;
         z-index: 9;
 
         margin-left: 0;
         padding: 20px 0;
-        background: #fff;
+        background: var(--sidebar-bg);
 
-        // hide navbar 
+        // hide navbar
         translate: -100%;
         transition: 0.5s;
 
         &.show {
-            // show navbar 
+            // show navbar
             translate: 0;
+            // khi navbar hien ra on tablet -> shadow 
+            box-shadow: 0px 40px 90px 20px var(--sidebar-shadow);
         }
 
-        // the .navbar__overlay visible khi the navbar co class show 
+        // the .navbar__overlay visible khi the navbar co class show
         &.show ~ &__overlay {
             visibility: visible;
             opacity: 1;
         }
     }
 
-   
+    // navbar on mobile
+    @include abstracts.screen(sm) {
+        inset: 0 20% 0 0;
+    }
 
-    // button arrow left for tablet 
     &__close-btn {
         display: none;
 
+        // button arrow left for tablet
         @include abstracts.screen(lg) {
             display: block;
             padding: 10px 40px;
         }
+
+        // arrow left icon on mobile
+        @include abstracts.screen(sm) {
+            padding: 0 20px 10px;
+        }
     }
 
-     // lop phu tablet
-     &__overlay {
+    // lop phu tablet
+    &__overlay {
         visibility: hidden;
         opacity: 0;
 
@@ -112,20 +123,24 @@
     &__list {
         @extend %flexItemCenter;
 
-        // edit ul tag on tablet 
+        // edit ul tag on tablet
         @include abstracts.screen(lg) {
             flex-direction: column;
             align-items: flex-start;
 
             overflow-y: auto;
-            height: calc(100% - 29px);
+            height: calc(100% - 34px);
+        }
+
+        // edit height ul on md screen
+        @include abstracts.screen(md) {
+            height: calc(100% - 137px);
         }
     }
 
-    // li 
+    // li
     &__item {
-
-        // show dropwdown when hover li tag 
+        // show dropwdown when hover li tag
         &:hover .dropdown {
             display: block;
         }
@@ -133,18 +148,17 @@
         @include abstracts.screen(lg) {
             width: 100%;
 
-            // mac dinh an dropdown (3 tag li) di on tablet 
+            // mac dinh an dropdown (3 tag li) di on tablet
             &:hover .dropdown {
                 display: none;
             }
 
             // neu co navbar__item--active(khi user click vao tag li ) -> hien thanh dropdown ( 3 tag li  on navbar)
             &--active .dropdown {
-                // bi ghi de boi thuoc tinh lop gia hover o tren -> importan 
+                // bi ghi de boi thuoc tinh lop gia hover o tren -> importan
                 display: block !important;
             }
         }
-
     }
 
     // a
@@ -159,11 +173,18 @@
         font-weight: 500;
         line-height: 1.46;
 
+        // tag a on tablet
         @include abstracts.screen(lg) {
             justify-content: space-between;
             padding: 0 40px;
             font-size: 1.6rem;
             line-height: 1.5;
+        }
+
+        //tag a on mobile
+        @include abstracts.screen(sm) {
+            height: 44px;
+            padding: 0 20px;
         }
     }
 
@@ -171,7 +192,7 @@
     &__arrow {
         margin-top: 3px;
 
-        // set icon arrow on tablet 
+        // set icon arrow on tablet
         @include abstracts.screen(lg) {
             rotate: -90deg;
             transition: rotate 0.3s;
@@ -190,7 +211,7 @@
     margin-left: auto;
     gap: 20px;
 
-    // can giua icon cho screen md 
+    // can giua icon cho screen md
     @include abstracts.screen(md) {
         margin-left: auto;
     }
@@ -207,8 +228,7 @@
         box-shadow: 0px 20px 60px 10px var(--header-act-dropdown-shadow);
     }
 
-
-        // hidden icon heart and cart on tablet and mobile
+    // hidden icon heart and cart on tablet and mobile
     //     @include abstracts.screen(md) {
     //         // display: none;
     //     }
@@ -256,13 +276,20 @@
     }
 }
 
-// icon and quatity on tablet 
+// icon and quatity on tablet
 .nav-btn {
     height: 50px;
     align-items: center;
     padding: 0 40px;
 
-    &__title,&__qnt {
+    // mobile
+    @include abstracts.screen(sm) {
+        height: 44px;
+        padding: 0 20px;
+    }
+
+    &__title,
+    &__qnt {
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.46;
@@ -272,7 +299,7 @@
         margin-left: 16px;
     }
 
-    // 3 -> day sat ve ben phai 
+    // 3 -> day sat ve ben phai
     &__qnt {
         margin-left: auto;
     }

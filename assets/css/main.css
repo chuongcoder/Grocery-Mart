@@ -1729,21 +1729,28 @@ html.dark {
 }
 @media (max-width: 991.98px) {
   .navbar {
+    border-radius: 0px 20px 20px 0px;
     position: fixed;
     inset: 0 50% 0 0;
     z-index: 9;
     margin-left: 0;
     padding: 20px 0;
-    background: #fff;
+    background: var(--sidebar-bg);
     translate: -100%;
     transition: 0.5s;
   }
   .navbar.show {
     translate: 0;
+    box-shadow: 0px 40px 90px 20px var(--sidebar-shadow);
   }
   .navbar.show ~ .navbar__overlay {
     visibility: visible;
     opacity: 1;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
   }
 }
 .navbar__close-btn {
@@ -1753,6 +1760,11 @@ html.dark {
   .navbar__close-btn {
     display: block;
     padding: 10px 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__close-btn {
+    padding: 0 20px 10px;
   }
 }
 .navbar__overlay {
@@ -1774,7 +1786,12 @@ html.dark {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
-    height: calc(100% - 29px);
+    height: calc(100% - 34px);
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100% - 137px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1805,6 +1822,12 @@ html.dark {
     padding: 0 40px;
     font-size: 1.6rem;
     line-height: 1.5;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__link {
+    height: 44px;
+    padding: 0 20px;
   }
 }
 .navbar__arrow {
@@ -1869,6 +1892,12 @@ html.dark {
   height: 50px;
   align-items: center;
   padding: 0 40px;
+}
+@media (max-width: 575.98px) {
+  .nav-btn {
+    height: 44px;
+    padding: 0 20px;
+  }
 }
 .nav-btn__title, .nav-btn__qnt {
   font-size: 1.5rem;
