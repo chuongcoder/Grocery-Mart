@@ -13,8 +13,6 @@
     @include abstracts.screen(lg) {
         padding-top: 0;
         position: initial;
-        // show dropdown on tablet 
-        display: block;
     }
 
     &__inner {

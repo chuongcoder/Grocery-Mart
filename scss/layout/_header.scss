@@ -132,7 +132,19 @@
 
         @include abstracts.screen(lg) {
             width: 100%;
+
+            // mac dinh an dropdown (3 tag li) di on tablet 
+            &:hover .dropdown {
+                display: none;
+            }
+
+            // neu co navbar__item--active(khi user click vao tag li ) -> hien thanh dropdown ( 3 tag li  on navbar)
+            &--active .dropdown {
+                // bi ghi de boi thuoc tinh lop gia hover o tren -> importan 
+                display: block !important;
+            }
         }
+
     }
 
     // a
@@ -158,6 +170,17 @@
     //a > img
     &__arrow {
         margin-top: 3px;
+
+        // set icon arrow on tablet 
+        @include abstracts.screen(lg) {
+            rotate: -90deg;
+            transition: rotate 0.3s;
+        }
+    }
+
+    // neu co active (hover == click on tablet => xoay ve 0 )
+    &__item--active &__arrow {
+        rotate: 0deg;
     }
 }
 
