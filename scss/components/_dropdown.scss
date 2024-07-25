@@ -1,10 +1,21 @@
 @use "../abstracts";
+
+// hover li on navbar -> show dropdown 
 .dropdown {
     position: absolute;
-    padding-top: 54px;
     left: 0;
+
+    padding-top: 54px;
     display: none;
     width: min(1240px, 100%);
+
+    // edit dropwdown on tablet 
+    @include abstracts.screen(lg) {
+        padding-top: 0;
+        position: initial;
+        // show dropdown on tablet 
+        display: block;
+    }
 
     &__inner {
         --inner-padding: 30px;
@@ -16,7 +27,7 @@
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
 
-        // icon chi muc
+        // icon chi muc (triangle)
         &::before {
             content: url("../icons/dropdown-arrow.svg");
             position: absolute;
@@ -24,6 +35,19 @@
             left: var(--arrow-left-pos);
             translate: -50%;
             filter: var(--dropdown-arrow-color);
+        }
+
+        // edit dropwdowm inner on tablet 
+        @include abstracts.screen(lg) {
+            padding: 0 40px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+
+            // remove icon triangle 
+            &::before {
+                content: none;
+            }
         }
     }
 }
@@ -42,8 +66,19 @@
         border-right: 1px solid var(--top-menu-border-color);
         // hien thanh cuon (khi height has value absolute )
         overflow-y: auto;
+
+        // edit top menu on tablet 
+        @include abstracts.screen(lg) {
+            width: 100%;
+
+            // to stop scrollbar 
+            height: auto;
+
+            border-right: none;
+        }
     }
 }
+
 .menu-column {
     // cho icon va content len 1 hang
     display: flex;
@@ -54,6 +89,10 @@
         margin-top: 22px;
     }
 
+    @include abstracts.screen(lg) {
+        margin-top: 10px;
+    }
+
     &__icon {
         position: relative;
         flex-shrink: 0;
@@ -61,9 +100,14 @@
         height: 36px;
         position: relative;
 
-        // hidden icon neu screen xl 
+        // hidden icon on xl
         @include abstracts.screen(xl) {
             display: none;
+        }
+
+        // show icon on mobile (tablet)
+        @include abstracts.screen(lg) {
+            display: block;
         }
     }
 
@@ -95,11 +139,20 @@
         font-size: 1.6rem;
         font-weight: 600;
         line-height: 1.5;
+
+        @include abstracts.screen(lg) {
+            margin-bottom: 26px;
+        }
     }
 
     // ul
     &__list {
         margin-top: 19px;
+
+        // edit margin top of list on tablet 
+        @include abstracts.screen(lg) {
+            margin-top: 0;
+        }
     }
 
     // li
@@ -141,6 +194,16 @@
 
     overflow-y: auto;
 
+    // edit sub-menu on tablet 
+    @include abstracts.screen(lg) {
+        // remove position absolute (submenu on tablet)
+        position: initial;
+        // edit 3 col sub-menu -> 1 col on tablet 
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
+    // li tag on navbar 
     &--not-main {
         // loai bo position & inset 
         position: initial;
@@ -151,5 +214,12 @@
         // add scrool bar -> set height
         height: var(--max-inner-height);
         padding-left: 0;
+
+        // edit sub-menu--notmain on tablet : 4fr -> 1fr
+        @include abstracts.screen(lg) {
+        grid-template-columns: 1fr;
+        // chi xh 1 thanh cuon 
+        height: auto;
+        }
     }
 }

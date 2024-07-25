@@ -1773,6 +1773,8 @@ html.dark {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
+    overflow-y: auto;
+    height: calc(100% - 29px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1781,9 +1783,6 @@ html.dark {
 @media (max-width: 991.98px) {
   .navbar__item {
     width: 100%;
-  }
-  .navbar__item:hover .dropdown {
-    display: none;
   }
 }
 .navbar__link {
@@ -1885,10 +1884,17 @@ html.dark {
 
 .dropdown {
   position: absolute;
-  padding-top: 54px;
   left: 0;
+  padding-top: 54px;
   display: none;
   width: min(1240px, 100%);
+}
+@media (max-width: 991.98px) {
+  .dropdown {
+    padding-top: 0;
+    position: initial;
+    display: block;
+  }
 }
 .dropdown__inner {
   --inner-padding: 30px;
@@ -1906,6 +1912,17 @@ html.dark {
   translate: -50%;
   filter: var(--dropdown-arrow-color);
 }
+@media (max-width: 991.98px) {
+  .dropdown__inner {
+    padding: 0 40px;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .dropdown__inner::before {
+    content: none;
+  }
+}
 
 .top-menu {
   --main-column-width: 292px;
@@ -1918,6 +1935,13 @@ html.dark {
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
+@media (max-width: 991.98px) {
+  .top-menu__main {
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+}
 
 .menu-column {
   display: flex;
@@ -1925,6 +1949,11 @@ html.dark {
 }
 .menu-column + .menu-column {
   margin-top: 22px;
+}
+@media (max-width: 991.98px) {
+  .menu-column {
+    margin-top: 10px;
+  }
 }
 .menu-column__icon {
   position: relative;
@@ -1936,6 +1965,11 @@ html.dark {
 @media (max-width: 1199.98px) {
   .menu-column__icon {
     display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .menu-column__icon {
+    display: block;
   }
 }
 .menu-column__content {
@@ -1961,8 +1995,18 @@ html.dark {
   font-weight: 600;
   line-height: 1.5;
 }
+@media (max-width: 991.98px) {
+  .menu-column__heading {
+    margin-bottom: 26px;
+  }
+}
 .menu-column__list {
   margin-top: 19px;
+}
+@media (max-width: 991.98px) {
+  .menu-column__list {
+    margin-top: 0;
+  }
 }
 .menu-column__item--active .sub-menu {
   display: grid;
@@ -1987,6 +2031,13 @@ html.dark {
   gap: var(--inner-padding);
   overflow-y: auto;
 }
+@media (max-width: 991.98px) {
+  .sub-menu {
+    position: initial;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+}
 .sub-menu--not-main {
   position: initial;
   inset: initial;
@@ -1994,6 +2045,12 @@ html.dark {
   grid-template-columns: repeat(4, 1fr);
   height: var(--max-inner-height);
   padding-left: 0;
+}
+@media (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

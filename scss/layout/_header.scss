@@ -112,9 +112,13 @@
     &__list {
         @extend %flexItemCenter;
 
+        // edit ul tag on tablet 
         @include abstracts.screen(lg) {
             flex-direction: column;
             align-items: flex-start;
+
+            overflow-y: auto;
+            height: calc(100% - 29px);
         }
     }
 
@@ -128,9 +132,6 @@
 
         @include abstracts.screen(lg) {
             width: 100%;
-            &:hover .dropdown {
-                display: none;
-            }
         }
     }
 
