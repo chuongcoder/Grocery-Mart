@@ -115,10 +115,66 @@
             <section class="home__container">
                 <div class="home__row">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
-                    <button class="filter-btn">
-                        Filter
-                        <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon" />
-                    </button>
+
+                    <!-- contain button filter and content inside button  -->
+                    <div class="filter-wrap">
+                        <button class="filter-btn">
+                            Filter
+                            <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon" />
+                        </button>
+
+                        <!-- content filter  -->
+                        <div class="filter">
+                            <h3 class="filter__heading">Filter</h3>
+                            <form action="" class="filter__form">
+                                <div class="filter__row">
+
+                                    <!-- col filter 1  -->
+                                    <div class="filter__col">
+                                        <label for="" class="filter__form-label">Price</label>
+                                        <div class="filter__form-group">
+                                            <!-- use before after  -->
+                                            <div class="filter__form-slider" style="--min-value: 10%; --max-value: 60%;"></div>
+                                        </div>
+                                        <div class="filter__form-group filter__form-group--inline">
+                                            <div>
+                                                <label for="" class="filter__form-label filter__form-label--small">
+                                                    Minimum
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                    class="filter__form-input"
+                                                    value="$100.00"
+                                                />
+                                            </div>
+
+                                            <div>
+                                                <label for="" class="filter__form-label filter__form-label--small">
+                                                    Maximum
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                    class="filter__form-input"
+                                                    value="$10000.00"
+
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- col filter 1  -->
+                                    <div class="filter__col"></div>
+
+                                    <!-- col filter 1  -->
+                                    <div class="filter__col"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -157,7 +213,6 @@
                             <button class="like-btn product-card__like-btn">
                                 <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon" />
                                 <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-
                             </button>
                         </div>
                         <h3>
@@ -182,7 +237,6 @@
                             <button class="like-btn product-card__like-btn">
                                 <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon" />
                                 <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-
                             </button>
                         </div>
                         <h3>
@@ -207,7 +261,6 @@
                             <button class="like-btn product-card__like-btn">
                                 <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon" />
                                 <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-
                             </button>
                         </div>
                         <h3>
