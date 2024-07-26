@@ -31,18 +31,19 @@
 
         <div class="container home">
             <!-- SlideShow  -->
-
-            <section class="home__container">
+            <div class="home__container">
                 <div class="slideshow">
-
                     <!-- slides  -->
                     <div class="slideshow__inner">
                         <div class="slideshow__item">
-                            <a href="!#" class="slideshow__link">
+                            <a href="#!" class="slideshow__link">
                                 <picture>
                                     <!-- edit img with other screen size  -->
-                                    <source media="(max-width: 991.98px)" srcset="./assets/img/slideshow/item-1-md.png" />
-                                    <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img">
+                                    <source
+                                        media="(max-width: 991.98px)"
+                                        srcset="./assets/img/slideshow/item-1-md.png"
+                                    />
+                                    <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
                                 </picture>
                             </a>
                         </div>
@@ -61,62 +62,166 @@
                         <span class="slideshow__num">5</span>
                     </div>
                 </div>
-            </section>
-            
+            </div>
+
             <!-- Browse Categories  -->
             <section class="home__container">
-                <h2 class="home__heading">Browse Categories</h2>
+                <div class="home__row">
+                    <h2 class="home__heading">Browse Categories</h2>
+                </div>
                 <div class="home__cate row row-cols-3 row-cols-md-1">
-
+                    <!-- Category Item 1  -->
                     <div class="col">
-                        <article class="cate-item">
-                            <img src="./assets/img/category-item/item-1.png" alt="" class="cate-item__thumb">
-                            <section class="cate-item__info">
-                                <h2 class="cate-item__title">
-                                    $24 - $150
-                                </h2>
-                                <p class="cate-item__desc">
-                                    New sumatra mandeling coffe blend
-                                </p>
-                            </section>
-                        </article>
+                        <a href="#!">
+                            <article class="cate-item">
+                                <img src="./assets/img/category-item/item-1.png" alt="" class="cate-item__thumb" />
+                                <div class="cate-item__info">
+                                    <h3 class="cate-item__title">$24 - $150</h3>
+                                    <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
+                    <!-- Category Item 2  -->
                     <div class="col">
-                        <article class="cate-item">
-                            <img src="./assets/img/category-item/item-2.png" alt="" class="cate-item__thumb">
-                            <section class="cate-item__info">
-                                <h2 class="cate-item__title">
-                                    $31 - $190
-                                </h2>
-                                <p class="cate-item__desc">
-                                    New sumatra mandeling coffe blend deli
-                                </p>
-                            </section>
-                        </article>
+                        <a href="#!">
+                            <article class="cate-item">
+                                <img src="./assets/img/category-item/item-2.png" alt="" class="cate-item__thumb" />
+                                <div class="cate-item__info">
+                                    <h3 class="cate-item__title">$31 - $190</h3>
+                                    <p class="cate-item__desc">New sumatra mandeling coffe blend deli</p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
+                    <!-- Category Item 3  -->
                     <div class="col">
-                        <article class="cate-item">
-                            <img src="./assets/img/category-item/item-3.png" alt="" class="cate-item__thumb">
-                            <section class="cate-item__info">
-                                <h2 class="cate-item__title">
-                                    $32 - $160
-                                </h2>
-                                <p class="cate-item__desc">
-                                   Lavaza top class whole bean coffee blend
-                                </p>
-                            </section>
-                        </article>
+                        <a href="#!">
+                            <article class="cate-item">
+                                <img src="./assets/img/category-item/item-3.png" alt="" class="cate-item__thumb" />
+                                <div class="cate-item__info">
+                                    <h3 class="cate-item__title">$32 - $160</h3>
+                                    <p class="cate-item__desc">Lavaza top class whole bean coffee blend</p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
-                    
                 </div>
             </section>
 
-               <!-- Browse Products  -->
-               <section class="home__container">
-                
-               </section>
+            <!-- Browse Products  -->
+            <section class="home__container">
+                <div class="home__row">
+                    <h2 class="home__heading">Total LavAzza 1320</h2>
+                    <button class="filter-btn">
+                        Filter
+                        <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon" />
+                    </button>
+                </div>
+            </section>
+
+            <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
+                <!-- Product card 1  -->
+                <div class="col">
+                    <article class="product-card">
+                        <div class="product-card__img-wrap">
+                            <a href="#!">
+                                <img src="./assets/img/product/item-1.png" class="product-card__thumb" alt="" />
+                            </a>
+                            <button class="like-btn like-btn--liked product-card__like-btn">
+                                <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon" />
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                            </button>
+                        </div>
+                        <h3>
+                            <a href="#!" class="product-card__title">Lavazza Coffee Blends - Try Italian Espresso </a>
+                        </h3>
+                        <p class="product-card__brand">lavazza</p>
+                        <div class="product-card__row">
+                            <span class="product-card__price">$47.00</span>
+                            <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                            <span class="product-card__score">4.3</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product card 2  -->
+                <div class="col">
+                    <article class="product-card">
+                        <div class="product-card__img-wrap">
+                            <a href="#!">
+                                <img src="./assets/img/product/item-2.png" class="product-card__thumb" alt="" />
+                            </a>
+                            <button class="like-btn product-card__like-btn">
+                                <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon" />
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+
+                            </button>
+                        </div>
+                        <h3>
+                            <a href="#!" class="product-card__title">Lavazza Coffee Blends - Try Italian Espresso </a>
+                        </h3>
+                        <p class="product-card__brand">Lavazza</p>
+                        <div class="product-card__row">
+                            <span class="product-card__price">$47.00</span>
+                            <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                            <span class="product-card__score">4.3</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product card 3  -->
+                <div class="col">
+                    <article class="product-card">
+                        <div class="product-card__img-wrap">
+                            <a href="#!">
+                                <img src="./assets/img/product/item-3.png" class="product-card__thumb" alt="" />
+                            </a>
+                            <button class="like-btn product-card__like-btn">
+                                <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon" />
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+
+                            </button>
+                        </div>
+                        <h3>
+                            <a href="#!" class="product-card__title">Lavazza Coffee Blends - Try Italian Espresso </a>
+                        </h3>
+                        <p class="product-card__brand">Samsung</p>
+                        <div class="product-card__row">
+                            <span class="product-card__price">$47.00</span>
+                            <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                            <span class="product-card__score">4.3</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Product card 4  -->
+                <div class="col">
+                    <article class="product-card">
+                        <div class="product-card__img-wrap">
+                            <a href="#!">
+                                <img src="./assets/img/product/item-4.png" class="product-card__thumb" alt="" />
+                            </a>
+                            <button class="like-btn product-card__like-btn">
+                                <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon" />
+                                <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+
+                            </button>
+                        </div>
+                        <h3>
+                            <a href="#!" class="product-card__title">Lavazza Coffee Blends - Try Italian Espresso </a>
+                        </h3>
+                        <p class="product-card__brand">Apple</p>
+                        <div class="product-card__row">
+                            <span class="product-card__price">$27.00</span>
+                            <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                            <span class="product-card__score">4.7</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
             <h1>Home page</h1>
             <!-- Footer  -->
             <footer id="footer"></footer>

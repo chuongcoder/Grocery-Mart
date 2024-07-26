@@ -10,13 +10,13 @@
     }
 
     &__heading {
-        margin-bottom: 20px;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.41;
     }
 
     &__cate {
+        
         // spacing between col
         --grid-gutter-x: 51px;
 
@@ -29,5 +29,13 @@
         @include abstracts.screen(md) {
             --grid-gutter-y: 20px;
         }
+    }
+
+    // home__row containe h2 title and a button(img icon)
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
     }
 }
