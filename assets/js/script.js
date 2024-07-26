@@ -114,18 +114,22 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
+            // auto active on screen pc 
             if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
+                    // vo hieu hoa hover tren tablet 
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
                 };
+                // click == hover on tablet (on pc not action) 
                 item.onclick = () => {
                     if (window.innerWidth > 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                    // khi click li -> ko bi giat 
                     item.scrollIntoView();
                 };
             });

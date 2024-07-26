@@ -12,6 +12,7 @@
     // edit dropwdown on tablet 
     @include abstracts.screen(lg) {
         padding-top: 0;
+        // remove position absolute on tablet
         position: initial;
     }
 
@@ -39,6 +40,7 @@
         @include abstracts.screen(lg) {
             padding: 0 40px;
             border-radius: 0;
+            // remove background and box-shadow 
             background: transparent;
             box-shadow: none;
 
@@ -65,7 +67,7 @@
         // hien thanh cuon (khi height has value absolute )
         overflow-y: auto;
 
-        // edit top menu on tablet 
+        // edit top menu main (contain icon group and content) on tablet 
         @include abstracts.screen(lg) {
             width: 100%;
 
@@ -77,6 +79,7 @@
     }
 }
 
+// 3 li tag of navbar 
 .menu-column {
     // cho icon va content len 1 hang
     display: flex;
@@ -216,7 +219,7 @@
         // edit sub-menu--notmain on tablet : 4fr -> 1fr
         @include abstracts.screen(lg) {
         grid-template-columns: 1fr;
-        // chi xh 1 thanh cuon 
+        // chi xh 1 thanh cuon (remove scroll child)
         height: auto;
         }
     }

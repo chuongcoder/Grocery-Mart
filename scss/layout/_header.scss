@@ -64,12 +64,12 @@
         padding: 20px 0;
         background: var(--sidebar-bg);
 
-        // hide navbar
+        // hide navbar on tablet
         translate: -100%;
-        transition: 0.5s;
+        transition: translate 0.5s;
 
         &.show {
-            // show navbar
+            // show navbar on tablet when have class show
             translate: 0;
             // khi navbar hien ra on tablet -> shadow 
             box-shadow: 0px 40px 90px 20px var(--sidebar-shadow);
@@ -88,6 +88,7 @@
     }
 
     &__close-btn {
+        // hide on pc 
         display: none;
 
         // button arrow left for tablet
@@ -104,9 +105,11 @@
 
     // lop phu tablet
     &__overlay {
+        // on pc -> hidden 
         visibility: hidden;
         opacity: 0;
 
+        // on tablet -> show overlay 
         @include abstracts.screen(lg) {
             position: fixed;
             inset: 0;
@@ -122,17 +125,21 @@
 
     // ul
     &__list {
+        // display: flex 
         @extend %flexItemCenter;
 
         // edit ul tag on tablet
         @include abstracts.screen(lg) {
+            // doc -> ngang 
             flex-direction: column;
+            // sat le trai 
             align-items: flex-start;
 
             // ngan viec tai lai khi keo xuong 
             overscroll-behavior: contain;
             
             overflow-y: auto;
+            // set height absolute to scroll 
             height: calc(100% - 34px);
         }
 
@@ -152,12 +159,12 @@
         @include abstracts.screen(lg) {
             width: 100%;
 
-            // mac dinh an dropdown (3 tag li) di on tablet
+            // default hide dropwdown on tablet
             &:hover .dropdown {
                 display: none;
             }
-
-            // neu co navbar__item--active(khi user click vao tag li ) -> hien thanh dropdown ( 3 tag li  on navbar)
+            
+            // show dropwdown when has class active (when click -> add "--active" to dropdown)
             &--active .dropdown {
                 // bi ghi de boi thuoc tinh lop gia hover o tren -> importan
                 display: block !important;

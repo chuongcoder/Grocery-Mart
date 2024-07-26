@@ -1738,7 +1738,7 @@ html.dark {
     padding: 20px 0;
     background: var(--sidebar-bg);
     translate: -100%;
-    transition: 0.5s;
+    transition: translate 0.5s;
   }
   .navbar.show {
     translate: 0;
