@@ -2405,19 +2405,62 @@ html.dark {
 .filter__form-slider::after {
   left: var(--max-value);
 }
+.filter__form-input, .filter__form-select-wrap {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
 .filter__form-input {
   width: 121px;
-  border-radius: 6px;
   height: 36px;
   padding: 0px 12px;
-  border: 1px solid #d2d1d6;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 1.42;
 }
+.filter__form-select-wrap {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.filter__form-select {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42;
+  cursor: pointer;
+}
+.filter__form-select + .filter__form-select {
+  border-left: 1px solid #d2d1d6;
+}
+.filter__form-tags {
+  display: flex;
+  gap: 10px 20px;
+}
+.filter__form-tag {
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #9e9da8;
+  background: var(--filter-form-tag-bg);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42;
+  transition: color 0.25s;
+}
+.filter__form-tag:hover {
+  color: var(--text-color);
+}
 .filter__row {
   display: flex;
   flex: 1;
+}
+.filter__separate {
+  width: 1px;
+  margin: 0 30px;
+  background: #eee;
 }
 
 .home__container {
