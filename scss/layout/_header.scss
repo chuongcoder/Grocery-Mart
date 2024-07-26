@@ -20,6 +20,7 @@
     @extend %flexItemCenter;
     // Mega menu
     position: relative;
+    z-index: 1;
     padding: 30px 0;
 
     // tablet
