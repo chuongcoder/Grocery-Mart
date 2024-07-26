@@ -1,0 +1,33 @@
+@use "../abstracts";
+
+.home {
+    &__container {
+        margin-top: 40px;
+    }
+
+    @include abstracts.screen(md) {
+        margin-top: 30px;
+    }
+
+    &__heading {
+        margin-bottom: 20px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41;
+    }
+
+    &__cate {
+        // spacing between col
+        --grid-gutter-x: 51px;
+
+        // spacing allow x on md screen(item)
+        @include abstracts.screen(lg) {
+            --grid-gutter-x: 24px;
+        }
+
+        // spacing allow y on md screen(item)
+        @include abstracts.screen(md) {
+            --grid-gutter-y: 20px;
+        }
+    }
+}
