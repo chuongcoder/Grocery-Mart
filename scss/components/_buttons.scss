@@ -43,3 +43,50 @@
     }
 }
 
+
+//Buttons 
+
+.btn {
+    user-select: none;
+    background: #f8f8fb;
+    padding: 0 20px;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    border-radius: 6px;
+    height: 46px;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        background: transparent;
+        color: #9e9da8;
+        font-weight: 400;
+    }
+
+    &--primary {
+        background: #ffb700;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

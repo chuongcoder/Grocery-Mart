@@ -1,8 +1,11 @@
+@use "../abstracts";
+// contain button filter and content filter ( 3 col filter )
 .filter-wrap {
     position: relative;
     z-index: 1;
 }
 
+// content filter contain 3 column filter 
 .filter {
     position: absolute;
     right: 0;
@@ -13,6 +16,31 @@
 
     background: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+    transition: opacity, visibility;
+    transition-duration: 0.2s;
+
+    // responsive filter with small screen 
+    @include abstracts.screen(sm) {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+        border-radius: 0;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    // icon nho len khoi content filter 
+    &__arrow {
+        position: absolute;
+        top: -10px;
+        right: 24px;
+        height: 20.5px;
+        filter: var(--filter-form-arrow);
+    }
 
     &__heading {
         font-size: 2.2rem;
@@ -22,8 +50,16 @@
 
     &__form {
         margin-top: 30px;
-        font-weight: 500;
-        line-height: 1.45;
+
+        &-group {
+            margin-top: 20px;
+
+            &--inline {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
 
         &-label {
             // ngan label an thuoc tinh display flex cua cha 
@@ -39,21 +75,14 @@
             }
         }
 
-        &-group {
-            margin-top: 20px;
-
-            &--inline {
-                display: flex;
-                gap: 30px;
-            }
-        }
+     
 
         &-slider {
             position: relative;
 
             width: 100%;
             height: 4px;
-            background: #ccc;
+            background: #d2d1d6;
 
             // make 2 circle 
             &::before, &::after {
@@ -80,76 +109,172 @@
             }
         }
 
+        &-text-input {
+            display: flex;
+            align-items: center;
+
+            width: 334px;
+            height: 44px;
+
+            overflow: hidden;
+
+            &--small {
+                width: 121px;
+                height: 36px;
+
+                @include abstracts.screen(xl) {
+                    width: 100%;
+                }
+            }
+
+            @include abstracts.screen(sm) {
+                width: 100%;
+            }
+        }
+
+        &-text-input--small &-input {
+            font-size: 1.4rem;
+            padding: 6px 16px;
+        }
+
+
         &-input, &-select-wrap {
             border-radius: 6px;
             border: 1px solid #d2d1d6;
         }
 
         &-input {
-            width: 121px;
-            height: 36px;
-            padding: 0px 12px;
+            padding: 10px 12px;
+            width: 100%;
 
-            font-size: 1.4rem;
-            font-weight: 600;
-            line-height: 1.42;
-        }
-
-        &-select-wrap {
-        display: flex;
-        align-items: center;
-        height: 45px;
-        }
-
-        &-select {
-            display: flex;
-            align-items: center;
-            padding: 0 14px;
-            min-width: var(--width, 108px);
-            height: calc(100% - 10px);
-
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 500;
-            line-height: 1.42;
+            line-height: 1.46;
 
-            cursor: pointer;
-        }
+            &::placeholder {
+                color: #9e9da8;
+                font-weight: 400;
+            }
 
-        // focus select thu 2 
-        &-select + &-select {
-            border-left: 1px solid #d2d1d6;
-        }
-
-        &-tags {
-            display: flex;
-            gap: 10px 20px;
-        }
-
-        &-tag {
-            border-radius: 6px;
-            padding: 6px 12px;
-            color: #9e9da8;
-            background: var(--filter-form-tag-bg);
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.42;
-            transition: color 0.25s;;
-
-            &:hover {
-                color: var(--text-color);
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem !important;
             }
         }
+
+        &-input-icon {
+            margin-left: 12px
+        }
+
+        // &-select-wrap {
+        // display: flex;
+        // align-items: center;
+        // height: 45px;
+        // }
+
+        // &-select {
+        //     display: flex;
+        //     align-items: center;
+        //     padding: 0 14px;
+        //     min-width: var(--width, 108px);
+        //     height: calc(100% - 10px);
+
+        //     font-size: 1.4rem;
+        //     font-weight: 500;
+        //     line-height: 1.42;
+
+        //     cursor: pointer;
+        // }
+
+        // focus select thu 2 
+        // &-select + &-select {
+        //     border-left: 1px solid #d2d1d6;
+        // }
+
+        // &-tags {
+        //     display: flex;
+        //     gap: 10px 20px;
+        // }
+
+        // &-tag {
+        //     border-radius: 6px;
+        //     padding: 6px 12px;
+        //     color: #9e9da8;
+        //     background: var(--filter-form-tag-bg);
+
+        //     font-size: 1.4rem;
+        //     font-weight: 500;
+        //     line-height: 1.42;
+        //     transition: color 0.25s;;
+
+        //     &:hover {
+        //         color: var(--text-color);
+            // }
+        // }
     }
 
+    // contain 3 col filter content 
     &__row {
         display: flex;
-        flex: 1;
     }
 
+    // vach ngan cach col 1 & col 2 
     &__separate {
         width: 1px;
         margin: 0 30px;
         background: #eee;
+    }
+
+
+    
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+
+        @include abstracts.screen(sm) {
+            position: sticky;
+            bottom: 30px;
+            background: var(--filter-form-bg);
+        }
+    }
+
+    &__cancel,
+    &__submit {
+        height: 38px;
+        padding: 0 10px;
+
+        @include abstracts.screen(sm) {
+            flex: 1;
+            height: 42px;
+        }
+    }
+
+    &__cancel {
+        font-size: 1.5rem;
+    }
+
+    &__submit {
+        font-size: 1.4rem;
+    }
+
+    &__heading,
+    &__content,
+    &__footer {
+        padding: 0 30px;
+    }
+
+    &__content {
+        max-height: calc(100vh - 350px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+
+        @include abstracts.screen(sm) {
+            max-height: calc(100vh - 230px);
+            padding-bottom: 60px;
+        }
     }
 }
