@@ -2331,10 +2331,16 @@ html.dark {
 }
 
 .product-card {
+  min-height: 100%;
   padding: 16px;
   border-radius: 20px;
   background: var(--product-card-bg);
   box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
+}
+@media (max-width: 1199.98px) {
+  .product-card {
+    position: relative;
+  }
 }
 .product-card__img-wrap {
   position: relative;
@@ -2370,6 +2376,14 @@ html.dark {
 .product-card__row {
   display: flex;
   align-items: center;
+}
+@media (max-width: 1199.98px) {
+  .product-card__row {
+    position: absolute;
+    right: 10px;
+    left: 16px;
+    bottom: 10px;
+  }
 }
 .product-card__star {
   margin: 0 6px 0 auto;
