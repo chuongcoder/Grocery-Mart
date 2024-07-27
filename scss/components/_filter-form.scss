@@ -28,6 +28,12 @@
         border-radius: 0;
     }
 
+    // &__col + &__col {
+    //     margin-top: 42px;
+    //     padding-top: 32px;
+    //     border-top: 1px solid #a3a2ad;
+    // }
+
     &.hide {
         opacity: 0;
         visibility: hidden;
@@ -222,6 +228,12 @@
         width: 1px;
         margin: 0 30px;
         background: #eee;
+
+        @include abstracts.screen(xl) {
+            width: 100%;
+            height: 1px;
+            margin: 30px 0;
+        }
     }
 
 
@@ -263,9 +275,12 @@
         padding: 0 30px;
     }
 
+    // contain content of filter (3 col)
     &__content {
+        // make scrollbar 
         max-height: calc(100vh - 350px);
         overflow-y: auto;
+
         overscroll-behavior: contain;
 
         @include abstracts.screen(xl) {
