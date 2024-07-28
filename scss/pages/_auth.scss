@@ -3,7 +3,11 @@
 .auth {
     display: flex;
     min-height: 100vh;
-
+    // ios 100vh vertical scroll bar 
+    // error not show footer on ios (safari browser)
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
     &__intro,
     &__content {
         flex: 1;

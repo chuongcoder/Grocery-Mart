@@ -41,6 +41,27 @@
             display: block;
         }
     }
+    &__logo {
+        // set gap with reponsice lg screen
+        @include abstracts.screen(lg) {
+            gap: 10px !important;
+            margin-left: auto;
+            &-title {
+                // set size font with reponsice lg screen
+                font-size: 1.8rem !important;
+            }
+
+            &-img {
+                width: 24px;
+            }
+        }
+
+        @include abstracts.screen(md) {
+            // margin: auto;
+            // display: flex;
+            margin-left: auto;
+        }
+    }
 }
 
 .navbar {
@@ -71,7 +92,7 @@
         &.show {
             // show navbar on tablet when have class show
             translate: 0;
-            // khi navbar hien ra on tablet -> shadow 
+            // khi navbar hien ra on tablet -> shadow
             box-shadow: 0px 40px 90px 20px var(--sidebar-shadow);
         }
 
@@ -88,7 +109,7 @@
     }
 
     &__close-btn {
-        // hide on pc 
+        // hide on pc
         display: none;
 
         // button arrow left for tablet
@@ -105,11 +126,11 @@
 
     // lop phu tablet
     &__overlay {
-        // on pc -> hidden 
+        // on pc -> hidden
         visibility: hidden;
         opacity: 0;
 
-        // on tablet -> show overlay 
+        // on tablet -> show overlay
         @include abstracts.screen(lg) {
             position: fixed;
             inset: 0;
@@ -125,21 +146,21 @@
 
     // ul
     &__list {
-        // display: flex 
+        // display: flex
         @extend %flexItemCenter;
 
         // edit ul tag on tablet
         @include abstracts.screen(lg) {
-            // doc -> ngang 
+            // doc -> ngang
             flex-direction: column;
-            // sat le trai 
+            // sat le trai
             align-items: flex-start;
 
-            // ngan viec tai lai khi keo xuong 
+            // ngan viec tai lai khi keo xuong
             overscroll-behavior: contain;
-            
+
             overflow-y: auto;
-            // set height absolute to scroll 
+            // set height absolute to scroll
             height: calc(100% - 34px);
         }
 
@@ -163,7 +184,7 @@
             &:hover .dropdown {
                 display: none;
             }
-            
+
             // show dropwdown when has class active (when click -> add "--active" to dropdown)
             &--active .dropdown {
                 // bi ghi de boi thuoc tinh lop gia hover o tren -> importan

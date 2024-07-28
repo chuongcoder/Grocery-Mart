@@ -3,34 +3,15 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    
-    // set gap with reponsice lg screen 
-    @include abstracts.screen(lg) {
-        gap: 10px;
-        margin-left: 40px;
-    }
 
     @include abstracts.screen(md) {
-        margin: auto;
-        display: flex;
+        margin-left: auto;
     }
-
+  
     &__title {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.45;
 
-    // set size font with reponsice lg screen 
-        @include abstracts.screen(lg) {
-            font-size: 1.8rem;
-        }
-
-    }
-
-    // set size logo with screen large 
-    &__img {
-        @include abstracts.screen(lg) {
-            width: 24px;
-        }
     }
 }
