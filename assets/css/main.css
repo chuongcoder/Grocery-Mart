@@ -2119,11 +2119,6 @@ html.dark {
   align-items: center;
   gap: 14px;
 }
-@media (max-width: 767.98px) {
-  .logo {
-    margin-left: auto;
-  }
-}
 .logo__title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -3218,6 +3213,7 @@ html.dark {
   font-weight: 500;
   line-height: 1.46;
   margin-top: 10px;
+  padding: 0 20px;
 }
 .auth__form {
   margin-top: 30px;
