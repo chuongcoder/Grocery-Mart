@@ -35,7 +35,7 @@
                 </a>
                 <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img" />
                 <p class="auth__intro-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, temporibus?
+                    The best of luxury brand values, high quality products, and innovative services
                 </p>
                 <button class="auth__intro-next d-none d-md-flex js-toggle" toggle-target="#auth-content">
                     <img src="./assets/img/auth/intro-arrow.svg" alt="" />
@@ -51,35 +51,43 @@
                         <h2 class="logo__title">Grocerymart</h2>
                     </a>
                     <h1 class="auth__heading">Hello Again!</h1>
-                    <p class="auth__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, facere amet? Aut sint, neque magnam quasi fugit quas expedita eum!</p>
+                    <p class="auth__desc">
+                        Welcome back to sign in. As a returning customer, you have access to your previously saved all
+                        information.
+                    </p>
                     <form action="./index-logined.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text-input">
                                 <input type="email" name="" required placeholder="Email" id="" class="form__input" />
-                                <img src="./assets/icons/message.svg" alt="" class="form__input-icon">
+                                <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
                         </div>
                         <!-- Error  -->
-                        <p class="form__error">Email chua dung dinh dang</p>
+                        <p class="form__error">Email is not in correct format</p>
 
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="password" name="" required placeholder="Password" id="" class="form__input" />
+                                <input
+                                    type="password"
+                                    name=""
+                                    required
+                                    placeholder="Password"
+                                    id=""
+                                    class="form__input"
+                                />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
-                        <p class="form__error">Mat khau it nhat 6 ky tu</p>
+                            <p class="form__error">Password must be at least 6 characters</p>
                         </div>
-
-                   
 
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none"/>
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
                                 <span class="form__checkbox-label">Set as default card</span>
                             </label>
-                            <a href="#!" class="auth__link form__pull-right">Recover Password</a>
+                            <a href="./reset-password.html" class="auth__link form__pull-right">Forgot Password ?</a>
                         </div>
 
                         <div class="form__group auth__btn-group">
@@ -92,7 +100,7 @@
                         </div>
 
                         <p class="auth__text">
-                           Don't have an account ?
+                            Don't have an account ?
                             <a href="./sign-up.html" class="auth__link">Sign Up</a>
                         </p>
                     </form>

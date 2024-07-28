@@ -8,6 +8,11 @@
     @supports (-webkit-touch-callout: none) {
         min-height: -webkit-fill-available;
     }
+
+    // Forgot password 
+    &__message {
+        margin-top: 30px;
+    }
     &__intro,
     &__content {
         flex: 1;
@@ -42,6 +47,7 @@
             translate: -50%;
         }
         &-img {
+            width: var(--width);
             max-width: 100%;
         }
 
@@ -113,7 +119,7 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
-        margin-top: 50px;
+        margin: 50px 0 100px 0  ;
     }
 
     &__btn {
