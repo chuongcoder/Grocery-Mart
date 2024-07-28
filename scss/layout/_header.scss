@@ -225,6 +225,12 @@
     // can giua icon cho screen md
     @include abstracts.screen(md) {
         margin-left: auto;
+
+        &__sign-up {
+            height: 40px !important;
+            padding: 0 8px !important;
+            font-size: 1.5rem !important;
+        }
     }
 
     // 3 group: 1btn | 2btn | avatar

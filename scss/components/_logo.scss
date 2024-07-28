@@ -4,6 +4,11 @@
     align-items: center;
     gap: 14px;
 
+    @include abstracts.screen(md) {
+        margin-left: 0 !important;
+    }
+    
+
     // set gap with reponsice lg screen 
     @include abstracts.screen(lg) {
         gap: 10px;
