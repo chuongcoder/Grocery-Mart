@@ -3,6 +3,7 @@
 $error-color: #ed4337;
 
 .form {
+    // if form invalid -> button sign up disable
     &:has(:invalid) &__submit-btn {
         opacity: 0.5;
         pointer-events: none;
@@ -39,22 +40,6 @@ $error-color: #ed4337;
         }
     }
 
-    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
-        .form__text-input {
-            border-color: $error-color;
-            background: rgba($color: $error-color, $alpha: 0.1);
-        }
-
-        .form__error,
-        .form__input-icon-error {
-            display: block;
-        }
-
-        .form__input-icon {
-            display: none;
-        }
-    }
-
     &__text-area,
     &__text-input {
         display: flex;
@@ -79,15 +64,19 @@ $error-color: #ed4337;
     }
 
     &__text-input {
-        position: relative;
-        height: 48px;
+        & {
+            position: relative;
+            height: 48px;
+        }
 
         &--small {
             height: 42px;
         }
 
         @include abstracts.screen(md) {
-            height: 48px;
+            & {
+                height: 48px;
+            }
         }
     }
 
@@ -258,56 +247,6 @@ $error-color: #ed4337;
         margin-left: auto;
     }
 
-    &__checkbox {
-        position: relative;
-
-        display: flex;
-        align-items: center;
-        user-select: none;
-
-        &-label {
-            margin-left: 29px;
-            color: #9e9da8;
-            font-size: 1.5rem;
-            font-weight: 500;
-            line-height: 146.667%;
-
-            @include abstracts.screen(md) {
-                font-size: 1.4rem;
-            }
-        }
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-        }
-
-        &::before {
-            width: 19px;
-            height: 19px;
-            border-radius: 5px;
-            border: 1px solid #9e9da8;
-        }
-    }
-
-    &__checkbox:has(:checked) {
-        &::before {
-            border-color: #ffb700;
-            background: #ffb700;
-        }
-
-        &::after {
-            width: 15px;
-            height: 8px;
-            border: 3px solid;
-            border-color: transparent transparent #fff #fff;
-            rotate: -45deg;
-            left: 2px;
-            top: 4px;
-        }
-    }
-
     &__label {
         display: block;
         font-size: 2.2rem;
@@ -385,6 +324,75 @@ $error-color: #ed4337;
 
         &:hover {
             color: var(--text-color);
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        &-label {
+            margin-left: 29px;
+            color: #9e9da8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 1px solid #9e9da8;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            border-color: #ffb700;
+            background: #ffb700;
+        }
+
+        &::after {
+            width: 15px;
+            height: 8px;
+            border: 3px solid;
+            border-color: transparent transparent #fff #fff;
+            rotate: -45deg;
+            left: 2px;
+            top: 4px;
+        }
+    }
+
+    // khi from co 1 thanh phan ben trong khong hop le & form co them the input khong hien thi placeholder  -> show error
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: $error-color;
+            background: rgba($color: $error-color, $alpha: 0.1);
+        }
+
+        // show error and mes error
+        .form__error,
+        .form__input-icon-error {
+            display: block;
+        }
+
+        // hide icon email and pass
+        .form__input-icon {
+            display: none !important;
         }
     }
 }

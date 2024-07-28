@@ -1,106 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign up | Grocery Mart</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign up | Grocery Mart</title>
+        <!-- favicon  -->
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
 
-    <!-- favicon  -->
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+        <!-- Fonts  -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
-    <!-- Fonts  -->
-    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+        <!-- Styles  -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
 
-    <!-- Styles  -->
-    <link rel="stylesheet" href="./assets/css/main.css">
+        <!-- Scripts  -->
+        <script src="./assets/js/script.js"></script>
+    </head>
 
-    <!-- Scripts  -->
-    <script src="./assets/js/script.js"></script>
-
-
-</head>
-
-<body>
-    <!-- auth: lien quan den xac thuc  -->
-    <main class="auth">
-        <!-- Auth intro  -->
-        <div class="auth__intro">
+    <body>
+        <!-- auth: lien quan den xac thuc  -->
+        <main class="auth">
+            <!-- Auth intro  -->
+            <div class="auth__intro">
                 <!-- Logo  md-->
-            <a href="./" class="logo d-none d-md-flex auth__intro-logo">
-                <img src="./assets/icons/logo.svg" alt="" class="logo__img">
-                <h1 class="logo__title"> Grocerymart </h1>
-            </a>
-            <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img">
-            <p class="auth__intro-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, temporibus?</p>
-            <button class="auth__intro-next d-none d-md-flex js-toggle" toggle-target="#auth-content">
-                <img src="./assets/img/auth/intro-arrow.svg" alt="">
-            </button>
-        </div>
-
-        <!-- Auth content  -->
-        <div id="auth-content" class="auth__content hide">
-            <div class="auth__content-inner">
-                <!-- Logo  -->
-                <a href="./" class="logo">
-                    <img src="./assets/icons/logo.svg" alt="" class="logo__img">
-                    <h1 class="logo__title"> Grocerymart </h1>
+                <a href="./" class="logo d-none d-md-flex auth__intro-logo">
+                    <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                    <h1 class="logo__title">Grocerymart</h1>
                 </a>
-                <h1 class="auth__heading">Sign Up</h1>
-                <p class="auth__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, soluta?</p>
-                <form action="./index-logined.html" class="form auth__form">
-
-                    <div class="form__group">
-                        <div class="form__text-input">
-                            <input type="email" name="" placeholder="Email" id="" class="form__input">
-                            <img src="./assets/icons/message.svg" alt="" class="form__input-icon">
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <div class="form__text-input">
-                            <input type="email" name="" placeholder="Password" id="" class="form__input">
-                            <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <div class="form__text-input">
-                            <input type="email" name="" placeholder="Confirm password" id="" class="form__input">
-                            <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
-                        </div>
-                    </div>
-
-                    <div class="form__group form__group--inline">
-                        <label for="" class="form__checkbox">
-                            <input type="checkbox" name="" id="" class="form__checkbox-input">
-                            <span class="form__checkbox-label">Set as default card</span>
-                        </label>
-                        <a href="#!" class="auth__link form__pull-right">Revover Password</a>
-                    </div>
-
-                    <div class="form__group auth__btn-group">
-                        <button class="btn btn--primary auth__btn">Sign Up</button>
-                        <button class="btn btn--outline auth__btn btn--no-margin"><img src="./assets/icons/google.svg" alt="" class="btn__icon"></button>
-                    </div>
-
-                    <p class="auth__text">
-                        You have an account ?
-                        <a href="./sign-in.html" class="auth__link">Sign In</a>
-                    </p>
-
-                </form>
+                <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img" />
+                <p class="auth__intro-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, temporibus?
+                </p>
+                <button class="auth__intro-next d-none d-md-flex js-toggle" toggle-target="#auth-content">
+                    <img src="./assets/img/auth/intro-arrow.svg" alt="" />
+                </button>
             </div>
-        </div>
-    </main>
-    <script>
-        window.dispatchEvent(new Event("template-loaded"));
-    </script>
-</body>
 
+            <!-- Auth content  -->
+            <div id="auth-content" class="auth__content hide">
+                <div class="auth__content-inner">
+                    <!-- Logo  -->
+                    <a href="./" class="logo">
+                        <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                        <h1 class="logo__title">Grocerymart</h1>
+                    </a>
+                    <h1 class="auth__heading">Sign Up</h1>
+                    <p class="auth__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, soluta?</p>
+                    <form action="./index-logined.html" class="form auth__form">
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="email" name="" required placeholder="Email" id="" class="form__input" />
+                                <img src="./assets/icons/message.svg" alt="" class="from__input-icon">
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                        </div>
+                        <!-- Error  -->
+                        <p class="form__error">Email chua dung dinh dang</p>
+
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="password" name="" required placeholder="Password" id="" class="form__input" />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                        <p class="form__error">Mat khau it nhat 6 ky tu</p>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input
+                                    type="password"
+                                    name=""
+                                    required
+                                    placeholder="Confirm password"
+                                    id=""
+                                    class="form__input"
+                                    minlength="6"
+                                />  
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Password must be at least 6 characters</p>
+                        </div>
+
+                        <div class="form__group form__group--inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none"/>
+                                <span class="form__checkbox-label">Set as default card</span>
+                            </label>
+                            <a href="#!" class="auth__link form__pull-right">Recover Password</a>
+                        </div>
+
+                        <div class="form__group auth__btn-group">
+                            <!-- form__submit-btn: lam mo btn -->
+                            <button class="btn btn--primary auth__btn form__submit-btn">Sign Up</button>
+                            <button class="btn btn--outline auth__btn btn--no-margin">
+                                <img src="./assets/icons/google.svg" alt="" class="btn__icon" />
+                                Sign in with Google
+                            </button>
+                        </div>
+
+                        <p class="auth__text">
+                            You have an account ?
+                            <a href="./sign-in.html" class="auth__link">Sign In</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
+    </body>
 </html>
