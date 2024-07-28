@@ -142,6 +142,7 @@
         height: 32px;
         border-radius: 6px;
 
+        // 50% là một mức trung gian, nơi mà màu sắc gốc của hình ảnh bị làm nhạt đi một nửa về màu xám.
         filter: grayscale(50%);
         transition: translate, filter;
         transition-duration: 0.3s;

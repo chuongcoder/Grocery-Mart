@@ -13,7 +13,7 @@
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-a
+
     <!-- Fonts  -->
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
 
@@ -27,16 +27,69 @@ a
 </head>
 
 <body>
-    <header id="header"></header>   
-    <script>
-        load("#header", "./template/header.html")
-    </script>
+    <!-- auth: lien quan den xac thuc  -->
+    <main class="auth">
+        <!-- Auth intro  -->
+        <div class="auth__intro">
+            <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img">
+            <p class="aythu__intro-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, temporibus?</p>
+        </div>
 
-    <h1>Sign up page</h1>
-    <footer id="footer"></footer>
-    <script>
-        load("#footer", "./template/footer.html")
-    </script>
+        <!-- Auth content  -->
+        <div class="auth__content">
+            <div class="auth__content-inner">
+                <!-- Logo  -->
+                <a href="./" class="logo">
+                    <img src="./assets/icons/logo.svg" alt="" class="logo__img">
+                    <h1 class="logo__title"><Grocerymart/h1>
+                </a>
+                <h1 class="auth__heading">Sign Up</h1>
+                <p class="auth__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, soluta?</p>
+                <form action="" class="form auth__form">
+
+                    <div class="form__group">
+                        <div class="form__text-input">
+                            <input type="email" name="" placeholder="Email" id="" class="form__input">
+                            <img src="./assets/icons/message.svg" alt="" class="form__input-icon">
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <div class="form__text-input">
+                            <input type="email" name="" placeholder="Password" id="" class="form__input">
+                            <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <div class="form__text-input">
+                            <input type="email" name="" placeholder="Confirm password" id="" class="form__input">
+                            <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
+                        </div>
+                    </div>
+
+                    <div class="form__group form__group--inline">
+                        <label for="" class="form__checkbox">
+                            <input type="checkbox" name="" id="" class="form__checkbox-input">
+                            <span class="form__checkbox-label">Set as default card</span>
+                        </label>
+                        <a href="#!" class="auth__link form__pull-right">Revover Password</a>
+                    </div>
+
+                    <div class="form__group auth__btn-group">
+                        <button class="btn btn--primary auth__btn">Sign Up</button>
+                        <button class="btn btn--outline auth__btn btn--no-margin"><img src="./assets/icons/google.svg" alt="" class="btn__icon"></button>
+                    </div>
+
+                    <p class="auth__text">
+                        You have an account ?
+                        <a href="./sign-in.html" class="auth__link">Sign In</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
