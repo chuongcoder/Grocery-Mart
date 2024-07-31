@@ -1,10 +1,11 @@
+@use "../abstracts";
+
 // main 
 .product-page {
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    height: 64px;
     padding: 0 20px;
     min-height: 80vh;
     border-radius: 10px;
@@ -25,9 +26,20 @@
 
 // image product 
 .prod-preview {
+    padding: 0 30px;
+
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
     &__list {
         display: flex;
         overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            flex: 1;
+        }
+
     }
     
     &__item {
@@ -53,6 +65,17 @@
         justify-content: center;
         padding: 30px;
         gap: 30px;
+
+        
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding-left: 0;
+        }
+
+        // remove thumbs on mobile 
+        @include abstracts.screen(md) {
+            display: none;
+        }
     }
 
     &__thumb-img {
@@ -78,21 +101,94 @@
 }
 
 // Info product 
-
 .prod-info {
     padding: 60px;
+    background: #f6f6f6;
+    @include abstracts.screen(xxl) {
+        padding: 40px;
+    }
+
+    @include abstracts.screen(lg) {
+        margin-top: 30px;
+    }
 
     &__heading {
         font-size: 2.6rem;
         font-weight: 500;
         line-height: 1.38;
     }
+
+    &__label {
+        margin-top: 30px;
+    }
+
+    &__tag {
+        background: var(--product-detail-tag-bg);
+    }
+
+    &__card {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid #b9babe;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 4500;
+        line-height: 1.5;
+    }
+
+    &__tax {
+        padding: 2px 8px;
+        margin-left: 10px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #67B044;
+        color: #67b044;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42;
+    }
+
+    &__total-price {
+        margin: 20px 0;
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 1.38;
+    }
+
+    &__add-to-cart {
+        flex: 1;
+    }
+
+    &__like-btn {
+        width: 46px;
+        height: 46px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        margin-left: 20px;
+        background: transparent;
+    }
+
+}
+
+.prod-props {
+    padding-left: 30px;
 }
 
 
 .prod-prop {
+    margin-top: 30px;
     display: flex;
     gap: 16px;
+
+    @include abstracts.screen(xxl) {
+        padding-left: 10px;
+    }
 
     &__icon {
         // can icon len dau 
