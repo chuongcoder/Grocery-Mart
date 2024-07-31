@@ -283,11 +283,15 @@
         padding: 13px;
     }
 
+    &__btn-wrap {
+        position: relative;
+    }
+
     // include span and img tag
     &__btn {
         padding: 13px 20px;
         @extend %flexItemCenter;
-
+        cursor: pointer;
         gap: 10px;
     }
 
@@ -340,5 +344,142 @@
     // 3 -> day sat ve ben phai
     &__qnt {
         margin-left: auto;
+    }
+}
+
+// dropdown cart
+.act-dropdown {
+    position: absolute;
+    right: 18px;
+    top: 73px;
+    padding-top: 26px;
+    width: min(520px, 100vw);
+    transition: opacity, visibility;
+    transition-duration: 0.5s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__inner {
+        position: relative;
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--header-act-dropdown-bg);
+        box-shadow: 0px 40px 90px 20px var(--header-act-dropdown-shadow);
+    }
+
+    &__arrow {
+        position: absolute;
+        top: -12px;
+        right: 80px;
+        height: 20.5px;
+        filter: var(--dropdown-arrow-color);
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+
+    // h2 & a 
+    &__view-all {
+        color: var(--blue-blue, #0071dc);
+        font-size: 1.8rem;
+        line-height: 1.45;
+    }
+
+    &__bottom {
+        margin: 20px 0;
+        border-width: 1px 0;
+        border-color: var(--header-act-dropdown-border-color);
+        border-style: solid;   
+        padding: 20px 0;    
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+
+        &-bold {
+            font-weight: 700;
+        }
+    }
+
+    &__list {
+        padding-bottom: 10px;
+        flex-wrap: nowrap;
+        // hien thanh cuon theo Ox 
+        overflow-x: auto;
+    }
+
+    &__row + &__row {
+        margin-top: 10px;
+    }
+
+    &__label, &__value {
+        font-size: 1.8rem;
+        line-height: 1.45;
+    }
+
+    &__checkout {
+        display: flex;
+        justify-content: flex-end;
+        
+        &--btn {
+            font-weight: 700;
+            min-width: 278px;
+        }
+    }
+
+}
+
+.cart-preview-item{
+    text-align: left;
+
+    &__img-wrap {
+        position: relative;
+        // padding top = % width container cha 
+        padding-top: 100%;
+        border: 1px solid var(--header-act-dropdown-border-color);
+        border-radius: 10px;
+    }
+    // img 
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__title {
+        margin-top: 14px;
+        font-size: 1.4em;
+        line-height: 1.42;
+    }
+
+    &__price {
+        padding-top: 6px;
+        font-size: 1.5rem;
+        line-height: 1.46;
+        font-weight: 700;
     }
 }
