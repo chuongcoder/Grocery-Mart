@@ -247,6 +247,11 @@
         margin: 0 -30px;
     }
 
+    @include abstracts.screen(md) {
+        margin: 0 -10px;
+        flex-wrap: wrap;
+    }
+
     &__item {
         padding: 0 30px;
         color: #9e9da8;
@@ -254,6 +259,19 @@
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 1.45;
+
+        user-select: none;
+        // thang hang 
+        white-space: nowrap;
+
+        @include abstracts.screen(md) {
+            padding: 8px 20px;
+            font-size: 1.8rem;
+        }
+
+        &:not(&--current) {
+            cursor: pointer;
+        }
 
         &--current {
             color: inherit;
