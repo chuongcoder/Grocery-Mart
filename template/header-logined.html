@@ -5236,12 +5236,92 @@
 
             <!-- pair button  -->
             <div class="top-act__group d-md-none">
-                <button class="top-act__btn">
-                    <img src="./assets/icons/heart.svg" alt="" class="top-act__icon icon" />
-                    <span class="top-act__title">03</span>
-                </button>
+                <!-- dropdown list favourate -->
+                <div class="top-act__btn-wrap js-toggle" toggle-target="#act-dropdown-like">
+                    <button class="top-act__btn">
+                        <img src="./assets/icons/heart.svg" alt="" class="top-act__icon icon" />
+                        <span class="top-act__title">03</span>
+                    </button>
+                    <div id="act-dropdown-like" class="act-dropdown-like hide">
+                        <div class="act-dropdown__inner">
+                            <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
+                            <div class="act-dropdown__top">
+                                <h2 class="act-dropdown__title">You have 3 item</h2>
+                                <a href="#!" class="act-dropdown__view-all">See All</a>
+                            </div>
 
-                <div class="top-act__separate"></div>
+                            <div class="row row-cols-3 gx-2 act-dropdown__list">
+                                <!-- Cart preview item 1  -->
+                                <div class="col">
+                                    <article class="cart-preview-item">
+                                        <div class="cart-preview-item__img-wrap">
+                                            <img
+                                                src="./assets/img/product/item-1.png"
+                                                alt=""
+                                                class="cart-preview-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                                        <p class="cart-preview-item__price">$329.00</p>
+                                    </article>
+                                </div>
+
+                                <!-- Cart preview item 2  -->
+                                <div class="col">
+                                    <article class="cart-preview-item">
+                                        <div class="cart-preview-item__img-wrap">
+                                            <img
+                                                src="./assets/img/product/item-2.png"
+                                                alt=""
+                                                class="cart-preview-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Coffee Beans Expresso</h3>
+                                        <p class="cart-preview-item__price">$39.99</p>
+                                    </article>
+                                </div>
+
+                                <!-- Cart preview item 3  -->
+                                <div class="col">
+                                    <article class="cart-preview-item">
+                                        <div class="cart-preview-item__img-wrap">
+                                            <img
+                                                src="./assets/img/product/item-3.png"
+                                                alt=""
+                                                class="cart-preview-item__thumb"
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Qualita Oro Mountain</h3>
+                                        <p class="cart-preview-item__price">$47.00</p>
+                                    </article>
+                                </div>
+
+                                <!-- Cart preview item 4  -->
+                                <!-- <div class="col">
+                                    <article class="cart-preview-item">
+                                        <div class="cart-preview-item__img-wrap">
+                                            <img src="./assets/img/product/item-3.png" alt="" class="cart-preview-item__thumb">
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Qualita Oro Mountain</h3>
+                                        <p class="cart-preview-item__price">$47.00</p>
+                                    </article>
+                                </div> -->
+                            </div>
+
+                            <div class="act-dropdown__separate"></div>
+
+                            <!-- button  -->
+                            <div class="act-dropdown__checkout">
+                                <a href="#!" class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
+                                    >Check Out All</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="top-act__separate">
+                </div>
 
                 <div class="top-action__btn-wrap js-toggle" toggle-target="#act-dropdown" >
                     <button class="top-act__btn">
@@ -5249,7 +5329,7 @@
                         <span class="top-act__title">$65.42</span>
                     </button>
                     <!-- Dropdown cart buy icon -->
-                    <div id="act-dropdown" class="act-dropdown" hide>
+                    <div id="act-dropdown" class="act-dropdown hide">
                         <div class="act-dropdown__inner">
                             <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
                             <div class="act-dropdown__top">
@@ -5338,7 +5418,7 @@
                             </div>
                             <!-- button  -->
                             <div class="act-dropdown__checkout">
-                                <a href="#!" class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
+                                <a href="./checkout.html" class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
                                     >Check Out All</a
                                 >
                             </div>

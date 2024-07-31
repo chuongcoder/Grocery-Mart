@@ -1950,6 +1950,24 @@ html.dark {
   margin-left: auto;
 }
 
+.act-dropdown-like {
+  position: absolute;
+  right: -53px;
+  top: 44px;
+  padding-top: 26px;
+  width: min(520px, 100vw);
+  transition: opacity, visibility;
+  transition-duration: 0.5s;
+}
+.act-dropdown-like.show {
+  opacity: 1;
+  visibility: visible;
+}
+.act-dropdown-like.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .act-dropdown {
   position: absolute;
   right: 18px;
@@ -2003,6 +2021,11 @@ html.dark {
   border-color: var(--header-act-dropdown-border-color);
   border-style: solid;
   padding: 20px 0;
+}
+.act-dropdown__separate {
+  margin: 20px 0;
+  height: 1px;
+  color: var(--header-act-dropdown-border-color);
 }
 .act-dropdown__row {
   display: flex;

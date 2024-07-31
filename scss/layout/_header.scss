@@ -347,6 +347,28 @@
     }
 }
 
+
+// dropdown like list 
+.act-dropdown-like {
+    position: absolute;
+    right: -53px;
+    top: 44px;
+    padding-top: 26px;
+    width: min(520px, 100vw);
+    transition: opacity, visibility;
+    transition-duration: 0.5s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 // dropdown cart
 .act-dropdown {
     position: absolute;
@@ -409,6 +431,12 @@
         border-color: var(--header-act-dropdown-border-color);
         border-style: solid;   
         padding: 20px 0;    
+    }
+
+    &__separate {
+        margin: 20px 0;
+        height: 1px;
+        color: var(--header-act-dropdown-border-color);
     }
 
     &__row {
