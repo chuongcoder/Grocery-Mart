@@ -3429,6 +3429,61 @@ html.dark {
   margin: 40px 0;
 }
 
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: opacity, visibility;
+  transition-duration: 0.2s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.dialog__content {
+  position: relative;
+  z-index: 1;
+  max-width: min(450px, 100% - 40px);
+  background: var(--dialog-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .dialog {
+    padding: 20px;
+  }
+  .dialog__bottom {
+    gap: 20px;
+  }
+  .dialog__btn {
+    flex: 1;
+  }
+}
+
 .home {
   margin-bottom: 50px;
 }
