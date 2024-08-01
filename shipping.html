@@ -121,7 +121,7 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn">
+                                                    <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
                                                         <img class="icon" src="./assets/icons/edit.svg" alt="" />
                                                     </button>
                                                 </div>
@@ -156,7 +156,7 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn">
+                                                    <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
                                                         <img class="icon" src="./assets/icons/edit.svg" alt="" />
                                                     </button>
                                                 </div>
@@ -191,7 +191,7 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn">
+                                                    <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
                                                         <img class="icon" src="./assets/icons/edit.svg" alt="" />
                                                     </button>
                                                 </div>
@@ -487,15 +487,83 @@
         <div class="modal show" id="add-new-address">
             <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button>
             <div class="modal__content">
+                <h2 class="modal__heading">Add new shopping address</h2>
                 <div class="modal__body">
-                    <h2 class="modal__heading">Add new shopping address</h2>
                     <form action="" class="form">
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="name" class="form__label form__label--small">Name</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="text"
+                                        name=""
+                                        required
+                                        placeholder="Name"
+                                        id="name"
+                                        class="form__input"
+                                        minlength="2"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Name must be at least 2 characters</p>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        required
+                                        placeholder="Phone"
+                                        id="phone"
+                                        class="form__input"
+                                        minlength="11"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Phone must be at least 11 characters</p>
+                            </div>
+                        </div>
+
                         <div class="form__group">
-                            <div class="form__text-input">
-                                <input type="text" name="" required placeholder="Name" id="name" class="form__input" minlength="2"/>
+                            <label for="address" class="form__label form__label--small">Phone</label>
+                            <div class="form__text-area">
+                                <textarea
+                                    name="address"
+                                    id="address"
+                                    placeholder="Address"
+                                    class="form__text-area-input"
+                                    required
+                                    minlength="11"
+                                ></textarea>
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
-                            <p class="form__error">Name must be at least 2 characters</p>
+                            <p class="form__error">Address not empty</p>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input
+                                    type="text"
+                                    name="city"
+                                    required
+                                    placeholder="City/District/Town"
+                                    id=""
+                                    class="form__input"
+                                    minlength="11"
+                                />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Phone must be at least 11 characters</p>
+                        </div>
+
+                        <div class="form__group form__group--inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
+                                <span class="form__checkbox-label">Set as default card</span>
+                            </label>
                         </div>
                     </form>
                 </div>
@@ -507,7 +575,7 @@
                         class="btn-small btn btn--primary modal__btn btn--no-margin js-toggle"
                         toggle-target="#add-new-address"
                     >
-                        Confirm
+                        Create
                     </button>
                 </div>
             </div>

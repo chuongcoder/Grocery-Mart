@@ -5,6 +5,7 @@
     inset: 0;
 }
 
+
 .modal {
     @extend %fill-screen;
     z-index: 99;
@@ -58,15 +59,29 @@
         border-radius: 0;
     }
 
+    &__body {
+        padding-right: 20px;
+        overflow-y: auto;
+        max-height: calc(100vh - 100px);
+    }
+
     &__content {
         position: relative;
         z-index: 1;
 
-        max-width: max(800px, 100% - 40px);
+        width: min(800px, 100% - 40px);
+    
         background: var(--dialog-bg);
         padding: 30px;
         border-radius: 20px;
         box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.41;
     }
 
     &__text {
