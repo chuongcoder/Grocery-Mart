@@ -79,7 +79,10 @@
                                             <h2 class="user-address__title">Shipping address</h2>
                                             <p class="user-address__desc">Where should we deliver your order ?</p>
                                         </div>
-                                        <button class="user-address__btn btn btn--primary btn--rounded btn--small">
+                                        <button
+                                            class="user-address__btn btn btn--primary btn--rounded btn--small js-toggle"
+                                            toggle-target="#add-new-address"
+                                        >
                                             <img src="./assets/icons/plus.svg" alt="" />
                                             Add a new address
                                         </button>
@@ -88,7 +91,7 @@
                                         <!-- Empty message  -->
                                         <!-- <p class="user-address__message">
                                             Not address yet. 
-                                            <a href="" class="user-address__link">Add a new address</a>
+                                            <a href="" class="user-address__link js-toggle" toggle-target="#add-new-address">Add a new address</a>
                                         </p> -->
 
                                         <!-- address cart 1  -->
@@ -97,7 +100,7 @@
                                                 <div class="address-card__choose">
                                                     <label for="" class="address-card__checkbox">
                                                         <input
-                                                        checked
+                                                            checked
                                                             type="checkbox"
                                                             name=""
                                                             class="address-card__checkbox-input"
@@ -132,7 +135,7 @@
                                                     <!-- Custom checkbox  -->
                                                     <label for="" class="address-card__checkbox">
                                                         <input
-                                                        checked
+                                                            checked
                                                             type="checkbox"
                                                             name=""
                                                             class="address-card__checkbox-input"
@@ -167,7 +170,7 @@
                                                     <!-- Custom checkbox  -->
                                                     <label for="" class="address-card__checkbox">
                                                         <input
-                                                        checked
+                                                            checked
                                                             type="checkbox"
                                                             name=""
                                                             class="address-card__checkbox-input"
@@ -458,18 +461,18 @@
             load("#footer", "./template/footer.html");
         </script>
 
-        <!-- Dialog / modal  -->
-        <div class="dialog hide" id="delete-confirm">
-            <div class="dialog__content">
-                <div class="dialog__text">
+        <!-- Modal: confirm remove shopping cart item -->
+        <div class="modal modal--small hide" id="delete-confirm">
+            <div class="modal__content">
+                <div class="modal__text">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, omnis?
                 </div>
-                <div class="dialog__bottom">
-                    <button class="btn-small btn btn--text dialog__btn js-toggle" toggle-target="#delete-confirm">
+                <div class="modal__bottom">
+                    <button class="btn-small btn btn--text modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
                     </button>
                     <button
-                        class="btn-small btn btn--primary dialog__btn btn--no-margin js-toggle"
+                        class="btn-small btn btn--primary modal__btn btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
                         Confirm
@@ -477,7 +480,39 @@
                 </div>
             </div>
 
-            <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+
+        <!-- Modal: add new shopping address -->
+        <div class="modal show" id="add-new-address">
+            <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button>
+            <div class="modal__content">
+                <div class="modal__body">
+                    <h2 class="modal__heading">Add new shopping address</h2>
+                    <form action="" class="form">
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="text" name="" required placeholder="Name" id="name" class="form__input" minlength="2"/>
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Name must be at least 2 characters</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__bottom">
+                    <button class="btn-small btn btn--text modal__btn js-toggle" toggle-target="#add-new-address">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn-small btn btn--primary modal__btn btn--no-margin js-toggle"
+                        toggle-target="#add-new-address"
+                    >
+                        Confirm
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal__overlay"></div>
         </div>
     </body>
 </html>

@@ -5,7 +5,7 @@
     inset: 0;
 }
 
-.dialog {
+.modal {
     @extend %fill-screen;
     z-index: 99;
     display: flex;
@@ -24,16 +24,45 @@
         visibility: visible;
     }
 
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        font-size: 3.5rem;
+        padding: 3px 20px;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+
     &__overlay {
         @extend %fill-screen;
         background: rgba($color: #000, $alpha: 0.4);
+    }
+
+    &--small &__content {
+        width: min(400px, 100% - 40px);
+    }
+
+    &--large &__content {
+        width: min(400px, 100% - 40px);
+    }
+
+    &--fill &__content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
     }
 
     &__content {
         position: relative;
         z-index: 1;
 
-        max-width: min(450px, 100% - 40px);
+        max-width: max(800px, 100% - 40px);
         background: var(--dialog-bg);
         padding: 30px;
         border-radius: 20px;
