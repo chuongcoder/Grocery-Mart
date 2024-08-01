@@ -4161,6 +4161,13 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .user-address__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 .user-address__title {
   font-size: 1.8rem;
@@ -4176,6 +4183,11 @@ html.dark {
   display: flex;
   gap: 10px;
 }
+@media (max-width: 767.98px) {
+  .user-address__btn {
+    height: 46px;
+  }
+}
 .user-address__nessage {
   margin-top: 30px;
   font-weight: 600;
@@ -4187,6 +4199,12 @@ html.dark {
 .address-card {
   display: flex;
   margin-top: 30px;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .address-card {
+    flex-direction: column;
+  }
 }
 .address-card__left {
   flex: 1;
@@ -4199,6 +4217,7 @@ html.dark {
   line-height: 1.44;
 }
 .address-card__desc {
+  width: min(520px, 90%);
   margin-top: 4px;
   font-size: 1.5rem;
   line-height: 1.46;
@@ -4210,6 +4229,12 @@ html.dark {
   font-size: 1.4rem;
   line-height: 1.42;
   list-style: disc inside;
+}
+@media (max-width: 575.98px) {
+  .address-card__list {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 .address-card__list-item {
   margin-left: 8px;
@@ -4231,6 +4256,9 @@ html.dark {
 }
 .address-card__checkbox-input::before {
   content: url("../icons/checkbox-uncheck.svg");
+}
+.address-card__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
 }
 .address-card__checkbox-input:checked::before {
   content: url("../icons/checkbox-checked.svg");

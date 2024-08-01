@@ -300,7 +300,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
+
 
     &__title {
         font-size: 1.8rem;
@@ -317,6 +324,10 @@
     &__btn {
         display: flex;
         gap: 10px;
+
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
     }
 
     &__nessage {
@@ -332,6 +343,11 @@
 .address-card {
     display: flex;
     margin-top: 30px;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
 
     &__left {
         flex: 1;
@@ -350,6 +366,7 @@
     }
 
     &__desc {
+        width: min(520px, 90%);
         margin-top: 4px;
         font-size: 1.5rem;
         line-height: 1.46;
@@ -362,6 +379,12 @@
         font-size: 1.4rem;
         line-height: 1.42;
         list-style: disc inside;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    
 
         &-item {
             margin-left: 8px;
@@ -390,9 +413,12 @@
                 content: url("../icons/checkbox-uncheck.svg");
             }
 
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
             &:checked::before {
                 content: url("../icons/checkbox-checked.svg");
-                
             }
         }
     }
