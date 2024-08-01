@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Checkout</title>
+        <title>Shipping</title>
 
         <!-- favicon  -->
         <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon.png" />
@@ -52,7 +52,14 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> checkout </a>
+                            <a href="./checkout.html" class="breadcrumbs__link">
+                                Checkout
+                                <!-- >  -->
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> Shipping </a>
                         </li>
                     </ul>
                 </div>
@@ -62,6 +69,136 @@
                     <div class="row gy-xl-3">
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
+                                <h1 class="cart-info__heading">1. Shipping, arrives between Mon,May16-Tue,May 24</h1>
+                                <div class="cart-info__separate"></div>
+
+                                <!-- Checkout address  -->
+                                <div class="user-address">
+                                    <div class="user-address__top">
+                                        <div>
+                                            <h2 class="user-address__title">Shipping address</h2>
+                                            <p class="user-address__desc">Where should we deliver your order ?</p>
+                                        </div>
+                                        <button class="user-address__btn btn btn--primary btn--rounded btn--small">
+                                            <img src="./assets/icons/plus.svg" alt="" />
+                                            Add a new address
+                                        </button>
+                                    </div>
+                                    <div class="user-address__list">
+                                        <!-- Empty message  -->
+                                        <!-- <p class="user-address__message">
+                                            Not address yet. 
+                                            <a href="" class="user-address__link">Add a new address</a>
+                                        </p> -->
+
+                                        <!-- address cart 1  -->
+                                        <article class="address-card">
+                                            <div class="address-card__left">
+                                                <div class="address-card__choose">
+                                                    <label for="" class="address-card__checkbox">
+                                                        <input
+                                                        checked
+                                                            type="checkbox"
+                                                            name=""
+                                                            class="address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
+                                                <div class="address-card__info">
+                                                    <h3 class="address-card__title">Imran Khan</h3>
+                                                    <p class="address-card__desc">
+                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Consequuntur, ipsa.
+                                                    </p>
+                                                    <ul class="address-card__list">
+                                                        <li class="address-card__list-item">Shipping</li>
+                                                        <li class="address-card__list-item">Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="address-card__right">
+                                                <div class="address-card__ctrl">
+                                                    <button class="address-card__ctrl-btn">
+                                                        <img src="./assets/icons/edit.svg" alt="" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <!-- address cart 2  -->
+                                        <article class="address-card">
+                                            <div class="address-card__left">
+                                                <div class="address-card__choose">
+                                                    <!-- Custom checkbox  -->
+                                                    <label for="" class="address-card__checkbox">
+                                                        <input
+                                                        checked
+                                                            type="checkbox"
+                                                            name=""
+                                                            class="address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
+                                                <div class="address-card__info">
+                                                    <h3 class="address-card__title">Imran Khan</h3>
+                                                    <p class="address-card__desc">
+                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Consequuntur, ipsa.
+                                                    </p>
+                                                    <ul class="address-card__list">
+                                                        <li class="address-card__list-item">Shipping</li>
+                                                        <li class="address-card__list-item">Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="address-card__right">
+                                                <div class="address-card__ctrl">
+                                                    <button class="address-card__ctrl-btn">
+                                                        <img src="./assets/icons/edit.svg" alt="" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <!-- address cart 3  -->
+                                        <article class="address-card">
+                                            <div class="address-card__left">
+                                                <div class="address-card__choose">
+                                                    <!-- Custom checkbox  -->
+                                                    <label for="" class="address-card__checkbox">
+                                                        <input
+                                                        checked
+                                                            type="checkbox"
+                                                            name=""
+                                                            class="address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
+                                                <div class="address-card__info">
+                                                    <h3 class="address-card__title">Imran Khan</h3>
+                                                    <p class="address-card__desc">
+                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Consequuntur, ipsa.
+                                                    </p>
+                                                    <ul class="address-card__list">
+                                                        <li class="address-card__list-item">Shipping</li>
+                                                        <li class="address-card__list-item">Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="address-card__right">
+                                                <div class="address-card__ctrl">
+                                                    <button class="address-card__ctrl-btn">
+                                                        <img src="./assets/icons/edit.svg" alt="" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <h2 class="cart-info__sub-heading">Items details</h2>
+
                                 <div class="cart-info__list">
                                     <!-- Cart item 1 -->
                                     <article class="cart-item">
@@ -110,7 +247,10 @@
                                                         <img src="./assets/icons/heart-2.svg" alt="" />
                                                         Save
                                                     </button>
-                                                    <button class="cart-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                                                    <button
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img src="./assets/icons/trash.svg" alt="" />
                                                         Delete
                                                     </button>
@@ -141,7 +281,11 @@
                                                 <div class="cart-item__ctrl cart-item__ctrl--md-block">
                                                     <div class="cart-item__input">
                                                         LavAzza
-                                                        <img class="icon" src="./assets/icons/arrow-down-2.svg" alt="" />
+                                                        <img
+                                                            class="icon"
+                                                            src="./assets/icons/arrow-down-2.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="cart-item__input">
                                                         <button class="cart-item__input-btn">
@@ -161,7 +305,10 @@
                                                         <img src="./assets/icons/heart-2.svg" alt="" />
                                                         Save
                                                     </button>
-                                                    <button class="cart-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                                                    <button
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img src="./assets/icons/trash.svg" alt="" />
                                                         Delete
                                                     </button>
@@ -192,7 +339,11 @@
                                                 <div class="cart-item__ctrl cart-item__ctrl--md-block">
                                                     <div class="cart-item__input">
                                                         LavAzza
-                                                        <img class="icon" src="./assets/icons/arrow-down-2.svg" alt="" />
+                                                        <img
+                                                            class="icon"
+                                                            src="./assets/icons/arrow-down-2.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="cart-item__input">
                                                         <button class="cart-item__input-btn">
@@ -212,7 +363,10 @@
                                                         <img src="./assets/icons/heart-2.svg" alt="" />
                                                         Save
                                                     </button>
-                                                    <button class="cart-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                                                    <button
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img src="./assets/icons/trash.svg" alt="" />
                                                         Delete
                                                     </button>
@@ -274,7 +428,7 @@
                                     <span>Estimated Total</span>
                                     <span>$201.65</span>
                                 </div>
-                                <a href="./shipping.html" class="cart-info__next-btn btn btn--primary btn--rounded"
+                                <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded"
                                     >Continue to checkout</a
                                 >
                             </div>
@@ -307,11 +461,19 @@
         <!-- Dialog / modal  -->
         <div class="dialog hide" id="delete-confirm">
             <div class="dialog__content">
-                <div class="dialog__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, omnis?
+                <div class="dialog__text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, omnis?
                 </div>
                 <div class="dialog__bottom">
-                    <button class="btn-small btn btn--text dialog__btn js-toggle" toggle-target="#delete-confirm">Cancel</button>
-                    <button class="btn-small btn btn--primary dialog__btn btn--no-margin js-toggle" toggle-target="#delete-confirm">Confirm</button>
+                    <button class="btn-small btn btn--text dialog__btn js-toggle" toggle-target="#delete-confirm">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn-small btn btn--primary dialog__btn btn--no-margin js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Confirm
+                    </button>
                 </div>
             </div>
 
