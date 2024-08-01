@@ -13,6 +13,10 @@
     @include abstracts.screen(lg) {
         box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
     }
+
+    @include abstracts.screen(md) {
+        box-shadow: none;
+    }
 }
 
 // cho cac phan tu trong header ngang len
