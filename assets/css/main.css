@@ -1708,7 +1708,7 @@ html.dark {
     box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   .header {
     box-shadow: none;
   }
@@ -3452,6 +3452,7 @@ html.dark {
   visibility: visible;
 }
 .modal__close {
+  color: #fff;
   position: absolute;
   top: 0;
   right: 0;
@@ -3490,6 +3491,12 @@ html.dark {
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+}
+@media (max-width: 767.98px) {
+  .modal__content {
+    height: calc(100% - 20px);
+    overflow: hidden;
+  }
 }
 .modal__heading {
   font-size: 2rem;

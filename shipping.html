@@ -121,7 +121,10 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
+                                                    <button
+                                                        class="address-card__ctrl-btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
                                                         <img class="icon" src="./assets/icons/edit.svg" alt="" />
                                                     </button>
                                                 </div>
@@ -156,7 +159,10 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
+                                                    <button
+                                                        class="address-card__ctrl-btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
                                                         <img class="icon" src="./assets/icons/edit.svg" alt="" />
                                                     </button>
                                                 </div>
@@ -191,7 +197,10 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn js-toggle" toggle-target="#add-new-address">
+                                                    <button
+                                                        class="address-card__ctrl-btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
                                                         <img class="icon" src="./assets/icons/edit.svg" alt="" />
                                                     </button>
                                                 </div>
@@ -547,14 +556,39 @@
                             <div class="form__text-input form__text-input--small">
                                 <input
                                     type="text"
-                                    name="city"
+                                    name=""
                                     required
                                     placeholder="City/District/Town"
-                                    id=""
+                                    id="city"
                                     class="form__input"
-                                    minlength="11"
                                 />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+
+                                <div class="form__select-dialog">
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search" class="form__search-input" />
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon" />
+                                    </div>
+                                    <ul class="form__options-list">
+                                        <li class="form__option--current">Ho Chi Minh</li>
+                                        <li>Da Nang</li>
+                                        <li>Ha Noi</li>
+                                        <li>Ha Nam</li>
+                                        <li>Thanh Hoa</li>
+                                        <li>Bac Ninh</li>
+                                        <li>Ha Giang</li>
+                                        <li>An Giang</li>
+                                        <li>Nam Dinh</li>
+                                        <li>Quang Ngai</li>
+                                        <li>Quang Nam</li>
+                                        <li>Ha Tinh</li>
+                                        <li>Quang Binh</li>
+                                        <li>Quang Ninh</li>
+                                        <li>Quang Tri</li>
+                                        <li>Can Tho</li>
+                                        <li>Nha Trang</li>
+                                    </ul>
+                                </div>
                             </div>
                             <p class="form__error">Phone must be at least 11 characters</p>
                         </div>
