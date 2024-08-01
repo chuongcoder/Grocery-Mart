@@ -109,10 +109,11 @@ $error-color: #ed4337;
         }
     }
 
+    // [input + icon] & [list_address]
     &__select-dialog {
         position: absolute;
-        bottom: 44px;
-        left: 10px;
+        bottom: 42px;
+        left: 1px;
         z-index: 1;
 
         display: flex;
@@ -165,6 +166,13 @@ $error-color: #ed4337;
         opacity: 0.8;
     }
 
+    &__input:focus ~ &__select-dialog {
+        opacity: 1;
+        visibility: visible;
+        translate: 0;
+    }
+
+    // input + icon search 
     &__search {
         display: flex;
         align-items: center;
@@ -182,7 +190,8 @@ $error-color: #ed4337;
 
         &-icon {
             width: 16px;
-            margin-left: 10px;
+            // margin-left: 10px;
+            margin: 0 10px 0 0;
         }
 
         @include abstracts.screen(lg) {
@@ -194,13 +203,15 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(sm) {
-            padding: 0 14px;
-            border: 1px solid #d2d1d6;
-            margin: 10px 30px 0;
-            border-radius: 10px;
+            margin-top: 30px;
+            // padding: 0 14px;
+            // border: 1px solid #d2d1d6;
+            // margin: 10px 30px 0;
+            // border-radius: 10px;
         }
     }
 
+    // ul address
     &__options-list {
         flex: 1;
         margin-top: 10px;
@@ -212,12 +223,15 @@ $error-color: #ed4337;
         }
     }
 
+    // li 
     &__option {
         padding: 8px 20px;
         font-size: 1.4rem;
 
         &--current {
-            font-weight: 500;
+            font-weight: 600;
+            padding: 10px 20px;
+            font-size: 1.4rem;
             background: rgba($color: #ffb700, $alpha: 0.6);
         }
 
@@ -243,7 +257,7 @@ $error-color: #ed4337;
 
     &__input-icon-error {
         display: none;
-        margin-left: 12px;
+        margin-right: 12px;
         animation: shake 0.5s;
     }
 

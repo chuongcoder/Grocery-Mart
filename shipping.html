@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -494,7 +494,7 @@
 
         <!-- Modal: add new shopping address -->
         <div class="modal show" id="add-new-address">
-            <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button>
+            <button class="modal__close js-toggle d-sm-none" toggle-target="#add-new-address">&times;</button>
             <div class="modal__content">
                 <h2 class="modal__heading">Add new shopping address</h2>
                 <div class="modal__body">
@@ -561,32 +561,34 @@
                                     placeholder="City/District/Town"
                                     id="city"
                                     class="form__input"
+                                    toggle-target="#city-dialog"
                                 />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
 
-                                <div class="form__select-dialog">
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <button class="form__close-dialog d-none d-sm-block js-toggle" toggle-target="#city-dialog">&times</button>
                                     <div class="form__search">
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
                                         <input type="text" placeholder="Search" class="form__search-input" />
-                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon" />
                                     </div>
                                     <ul class="form__options-list">
-                                        <li class="form__option--current">Ho Chi Minh</li>
-                                        <li>Da Nang</li>
-                                        <li>Ha Noi</li>
-                                        <li>Ha Nam</li>
-                                        <li>Thanh Hoa</li>
-                                        <li>Bac Ninh</li>
-                                        <li>Ha Giang</li>
-                                        <li>An Giang</li>
-                                        <li>Nam Dinh</li>
-                                        <li>Quang Ngai</li>
-                                        <li>Quang Nam</li>
-                                        <li>Ha Tinh</li>
-                                        <li>Quang Binh</li>
-                                        <li>Quang Ninh</li>
-                                        <li>Quang Tri</li>
-                                        <li>Can Tho</li>
-                                        <li>Nha Trang</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option form__option--current">Ho Chi Minh</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Ha Nam</li>
+                                        <li class="form__option">Thanh Hoa</li>
+                                        <li class="form__option">Bac Ninh</li>
+                                        <li class="form__option">Ha Giang</li>
+                                        <li class="form__option">An Giang</li>
+                                        <li class="form__option">Nam Dinh</li>
+                                        <li class="form__option">Quang Ngai</li>
+                                        <li class="form__option">Quang Nam</li>
+                                        <li class="form__option">Ha Tinh</li>
+                                        <li class="form__option">Quang Binh</li>
+                                        <li class="form__option">Quang Ninh</li>
+                                        <li class="form__option">Quang Tri</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Nha Trang</li>
                                     </ul>
                                 </div>
                             </div>
