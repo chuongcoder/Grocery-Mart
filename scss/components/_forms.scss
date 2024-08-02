@@ -111,6 +111,7 @@ $error-color: #ed4337;
 
     // [input + icon] & [list_address]
     &__select-dialog {
+        overflow-y: auto;
         position: absolute;
         bottom: 42px;
         left: 1px;
@@ -120,7 +121,8 @@ $error-color: #ed4337;
         flex-direction: column;
 
         opacity: 0;
-        visibility: hidden;
+        // visibility: hidden;
+        display: none;
         translate: 0 8px;
 
         transition: opacity, visibility, translate;
@@ -129,7 +131,7 @@ $error-color: #ed4337;
         min-width: 230px;
         max-height: 310px;
         padding-bottom: 10px;
-        border: 1px solid #d2d1d6;
+        border: 2px solid #d2d1d6;
         border-radius: 10px;
         box-shadow: 0 0 5px var(--form-select-dialog-shadow);
 
@@ -137,8 +139,13 @@ $error-color: #ed4337;
 
         &.show {
             opacity: 1;
-            visibility: visible;
+            // visibility: visible;
+            display: block;
             translate: 0;
+        }
+
+        @include abstracts.screen(md) {
+        max-height: 298px;
         }
 
         @include abstracts.screen(sm) {
@@ -158,19 +165,17 @@ $error-color: #ed4337;
     }
 
     &__close-dialog {
+        margin: 17px 0 0 auto;
         font-size: 3rem;
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 12px 18px;
+        padding: 2px 18px;
         opacity: 0.8;
     }
 
-    &__input:focus ~ &__select-dialog {
-        opacity: 1;
-        visibility: visible;
-        translate: 0;
-    }
+    // &__input:focus ~ &__select-dialog {
+    //     opacity: 1;
+    //     visibility: visible;
+    //     translate: 0;
+    // }
 
     // input + icon search 
     &__search {
@@ -186,12 +191,12 @@ $error-color: #ed4337;
             flex: 1;
             height: 100%;
             font-size: 1.6rem;
+            padding-left: 8px;
         }
 
         &-icon {
             width: 16px;
-            // margin-left: 10px;
-            margin: 0 10px 0 0;
+            margin-right: 10px;
         }
 
         @include abstracts.screen(lg) {
@@ -203,7 +208,9 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(sm) {
-            margin-top: 30px;
+            &-icon {
+                margin-left: 0;
+            }
             // padding: 0 14px;
             // border: 1px solid #d2d1d6;
             // margin: 10px 30px 0;

@@ -2989,6 +2989,7 @@ html.dark {
   margin-left: 12px;
 }
 .form__select-dialog {
+  overflow-y: auto;
   position: absolute;
   bottom: 42px;
   left: 1px;
@@ -2996,22 +2997,27 @@ html.dark {
   display: flex;
   flex-direction: column;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   translate: 0 8px;
   transition: opacity, visibility, translate;
   transition-duration: 0.2s;
   min-width: 230px;
   max-height: 310px;
   padding-bottom: 10px;
-  border: 1px solid #d2d1d6;
+  border: 2px solid #d2d1d6;
   border-radius: 10px;
   box-shadow: 0 0 5px var(--form-select-dialog-shadow);
   background: var(--form-select-dialog-bg);
 }
 .form__select-dialog.show {
   opacity: 1;
-  visibility: visible;
+  display: block;
   translate: 0;
+}
+@media (max-width: 767.98px) {
+  .form__select-dialog {
+    max-height: 298px;
+  }
 }
 @media (max-width: 575.98px) {
   .form__select-dialog {
@@ -3029,17 +3035,10 @@ html.dark {
   text-align: center;
 }
 .form__close-dialog {
+  margin: 17px 0 0 auto;
   font-size: 3rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 18px;
+  padding: 2px 18px;
   opacity: 0.8;
-}
-.form__input:focus ~ .form__select-dialog {
-  opacity: 1;
-  visibility: visible;
-  translate: 0;
 }
 .form__search {
   display: flex;
@@ -3053,10 +3052,11 @@ html.dark {
   flex: 1;
   height: 100%;
   font-size: 1.6rem;
+  padding-left: 8px;
 }
 .form__search-icon {
   width: 16px;
-  margin: 0 10px 0 0;
+  margin-right: 10px;
 }
 @media (max-width: 991.98px) {
   .form__search {
@@ -3067,8 +3067,8 @@ html.dark {
   }
 }
 @media (max-width: 575.98px) {
-  .form__search {
-    margin-top: 30px;
+  .form__search-icon {
+    margin-left: 0;
   }
 }
 .form__options-list {
@@ -3665,12 +3665,22 @@ html.dark {
   font-weight: 500;
   line-height: 1.46;
 }
+@media (max-width: 767.98px) {
+  .auth__link {
+    padding: 10px;
+  }
+}
 .auth__btn-group {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin: 50px 0 100px 0;
+}
+@media (max-width: 767.98px) {
+  .auth__btn-group {
+    margin-bottom: 0;
+  }
 }
 .auth__btn {
   gap: 5px;
