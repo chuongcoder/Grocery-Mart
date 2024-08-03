@@ -92,6 +92,14 @@
         &-bold {
             font-size: 2.2rem;
         }
+
+        &-md-block {
+            @include abstracts.screen(md) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
     }
 
     &__separate {
@@ -150,6 +158,12 @@
         }
     }
 
+    &__checkout-all {
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
+    }
+
     &__form {
         margin-bottom: 30px;
     }
@@ -159,7 +173,13 @@
         font-size: 1.5rem;
         line-height: 1.42;
     }
+
+    &__check-all {
+        margin: 30px 0;
+    }
 }
+
+// End cart-info 
 
 .cart-info + .cart-info {
     margin-top: 30px;
@@ -167,12 +187,12 @@
 
 .cart-item {
     display: flex;
-    gap: 30px;
+    // gap: 30px;
     padding: 30px 0;
     border-bottom: 1px solid var(--checkout-border-color);
 
     @include abstracts.screen(md) {
-        gap: 16px;
+        // gap: 16px;
         padding: 16px 0;
         &:last-child {
             border: none;
@@ -181,6 +201,7 @@
 
     // img product
     &__thumb {
+        margin: 0 30px 0 20px;
         width: 172px;
         height: 172px;
         object-fit: contain;
@@ -198,6 +219,7 @@
         @include abstracts.screen(md) {
             width: 60px;
             height: 60px;
+            margin: 0 16px;
         }
     }
 
@@ -205,7 +227,7 @@
     &__content {
         flex: 1;
         display: flex;
-        align-items: center;
+        // align-items: center;
         // Oy : start 
         align-self: flex-start;
 
@@ -247,6 +269,17 @@
 
     &__status {
         color: #67b044;
+    }
+
+    &__ctrl-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__ctrl {
@@ -309,8 +342,15 @@
         flex: 1;
     }
 
+    &__checkout-btn {
+        margin-top: auto;
+        max-width: 200px;
+    }
+
 
 }
+
+// End cart item 
 
 .gift-item {
     display: flex;
