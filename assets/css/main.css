@@ -4231,6 +4231,9 @@ html.dark {
 .cart-item__ctrl-btn:first-child {
   margin-right: 10px;
 }
+.cart-item-info {
+  flex: 1;
+}
 
 .gift-item {
   display: flex;
@@ -4357,10 +4360,24 @@ html.dark {
   margin-top: 30px;
   border-radius: 20px;
   padding: 20px;
-  background: #f6f6f6;
+  background: var(--checkout-payment-item-bg);
+}
+@media (max-width: 575.98px) {
+  .payment-item {
+    align-items: flex-start;
+  }
 }
 .payment-item__content {
   flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .payment-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .payment-item__title {
   font-size: 1.8rem;

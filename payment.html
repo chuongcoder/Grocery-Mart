@@ -124,19 +124,21 @@
                                             class="payment-item__thumb"
                                         />
                                         <div class="payment-item__content">
-                                            <h3 class="payment-item__title">Fedex Delivery</h3>
-                                            <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title">Fedex Delivery</h3>
+                                                <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                                            </div>
+                                            <span for="" class="cart-info__checkbox payment-item__checkbox">
+                                                <input
+                                                    name="delivery-method"
+                                                    checked
+                                                    type="radio"
+                                                    name=""
+                                                    class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                />
+                                                <span class="payment-item__cost">Free</span>
+                                            </span>
                                         </div>
-                                        <span for="" class="cart-info__checkbox payment-item__checkbox">
-                                            <input
-                                                name="delivery-method"
-                                                checked
-                                                type="radio"
-                                                name=""
-                                                class="cart-info__checkbox-input payment-item__checkbox-input"
-                                            />
-                                            <span class="payment-item__cost">Free</span>
-                                        </span>
                                     </article>
                                 </label>
 
@@ -150,18 +152,20 @@
                                             class="payment-item__thumb"
                                         />
                                         <div class="payment-item__content">
-                                            <h3 class="payment-item__title">DHL Delivery</h3>
-                                            <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title">DHL Delivery</h3>
+                                                <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                                            </div>
+                                                <span for="" class="cart-info__checkbox payment-item__checkbox">
+                                                    <input
+                                                        name="delivery-method"
+                                                        type="radio"
+                                                        name=""
+                                                        class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                    />
+                                                    <span class="payment-item__cost">$12.00</span>
+                                                </span>
                                         </div>
-                                        <span for="" class="cart-info__checkbox payment-item__checkbox">
-                                            <input
-                                                name="delivery-method"
-                                                type="radio"
-                                                name=""
-                                                class="cart-info__checkbox-input payment-item__checkbox-input"
-                                            />
-                                            <span class="payment-item__cost">$12.00</span>
-                                        </span>
                                     </article>
                                 </label>
                             </div>
@@ -174,7 +178,6 @@
                                 </p>
 
                                 <form action="" class="form cart-info__form">
-
                                     <div class="form__group">
                                         <label for="email" class="form__label form__label--medium">Email Address</label>
                                         <div class="form__text-input">
@@ -190,7 +193,9 @@
                                     </div>
 
                                     <div class="form__group">
-                                        <label for="cart-holder" class="form__label form__label--medium">Cart Holder</label>
+                                        <label for="cart-holder" class="form__label form__label--medium"
+                                            >Cart Holder</label
+                                        >
                                         <div class="form__text-input">
                                             <input
                                                 type="text"
@@ -204,7 +209,9 @@
                                     </div>
 
                                     <div class="form__group">
-                                        <label for="card-detail" class="form__label form__label--medium">Cart Detail</label>
+                                        <label for="card-detail" class="form__label form__label--medium"
+                                            >Cart Detail</label
+                                        >
                                         <div class="form__text-input">
                                             <input
                                                 type="text"
@@ -261,9 +268,7 @@
                                     <span>Estimated Total</span>
                                     <span>$201.65</span>
                                 </div>
-                                <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded"
-                                    >Pay $465.98</a
-                                >
+                                <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded">Pay $465.98</a>
                             </div>
                             <div class="cart-info">
                                 <a href="#!">
@@ -318,7 +323,11 @@
                     <form action="" class="form">
                         <div class="form__row">
                             <div class="form__group">
-                                <label for="name" class="form__label form__label--medium form__label form__label--medium--small">Name</label>
+                                <label
+                                    for="name"
+                                    class="form__label form__label--medium form__label form__label--medium--small"
+                                    >Name</label
+                                >
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="text"
@@ -335,7 +344,11 @@
                             </div>
 
                             <div class="form__group">
-                                <label for="phone" class="form__label form__label--medium form__label form__label--medium--small">Phone</label>
+                                <label
+                                    for="phone"
+                                    class="form__label form__label--medium form__label form__label--medium--small"
+                                    >Phone</label
+                                >
                                 <div class="form__text-input form__text-input--small">
                                     <input
                                         type="tel"
@@ -353,7 +366,11 @@
                         </div>
 
                         <div class="form__group">
-                            <label for="address" class="form__label form__label--medium form__label form__label--medium--small">Phone</label>
+                            <label
+                                for="address"
+                                class="form__label form__label--medium form__label form__label--medium--small"
+                                >Phone</label
+                            >
                             <div class="form__text-area">
                                 <textarea
                                     name="address"
@@ -369,7 +386,11 @@
                         </div>
 
                         <div class="form__group">
-                            <label for="city" class="form__label form__label--medium form__label form__label--medium--small">City/District/Town</label>
+                            <label
+                                for="city"
+                                class="form__label form__label--medium form__label form__label--medium--small"
+                                >City/District/Town</label
+                            >
                             <div class="form__text-input form__text-input--small">
                                 <input
                                     type="text"
