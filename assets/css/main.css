@@ -4156,7 +4156,15 @@ html.dark {
   align-items: center;
   justify-content: space-between;
 }
+.cart-info__back-arrow {
+  position: relative;
+  top: 4px;
+  padding-right: 20px;
+  width: 50px;
+}
 .cart-info__heading {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.41;
@@ -4684,6 +4692,16 @@ html.dark {
 }
 .profile__desc {
   margin-bottom: 16px;
+}
+
+.form-card__label {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -39,7 +39,16 @@
         justify-content: space-between;
     }
 
+    &__back-arrow {
+        position: relative;
+        top: 4px;
+        padding-right: 20px;
+        width: 50px;
+    }
+
     &__heading {
+        display: flex;
+        align-items: center;
         font-size: 2rem;
         font-weight: 700;
         line-height: 1.41;

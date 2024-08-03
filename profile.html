@@ -228,8 +228,12 @@
 
                                             <!-- Payment card ( new card ) -->
                                             <div class="col-4">
-                                                <a href="#!" class="new-card">
-                                                    <img src="./assets/icons/plus.svg" alt="" class="new-card__icon icon" />
+                                                <a href="./add-new-card.html" class="new-card">
+                                                    <img
+                                                        src="./assets/icons/plus.svg"
+                                                        alt=""
+                                                        class="new-card__icon icon"
+                                                    />
                                                     <p class="new-card__text">Add New Card</p>
                                                 </a>
                                             </div>
@@ -300,7 +304,9 @@
                                                 class="favourite-item__thumb"
                                             />
                                             <div>
-                                                <h3 class="favourite-item__title">Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+                                                <h3 class="favourite-item__title">
+                                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                                </h3>
                                                 <div class="favourite-item__content">
                                                     <span class="favourite-item__price">$47.00</span>
                                                     <button class="btn btn--primary btn--rounded">Add to cart</button>
@@ -310,15 +316,17 @@
 
                                         <div class="separate" style="--margin: 20px"></div>
 
-                                          <!-- Favourite item 2  -->
-                                          <article class="favourite-item">
+                                        <!-- Favourite item 2  -->
+                                        <article class="favourite-item">
                                             <img
                                                 src="./assets/img/product/item-2.png"
                                                 alt=""
                                                 class="favourite-item__thumb"
                                             />
                                             <div>
-                                                <h3 class="favourite-item__title">Lavazza Coffee Blends - Try the italian Espresso</h3>
+                                                <h3 class="favourite-item__title">
+                                                    Lavazza Coffee Blends - Try the italian Espresso
+                                                </h3>
                                                 <div class="favourite-item__content">
                                                     <span class="favourite-item__price">$53.00</span>
                                                     <button class="btn btn--primary btn--rounded">Add to cart</button>
@@ -338,25 +346,5 @@
         <script>
             load("#footer", "./template/footer.html");
         </script>
-
-        <!-- Modal: confirm remove shopping cart item -->
-        <div class="modal modal--small hide" id="delete-confirm">
-            <div class="modal__content">
-                <div class="modal__text">Do you want remove this item shopping cart ?</div>
-                <div class="modal__bottom">
-                    <button class="btn btn-small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
-                        Cancel
-                    </button>
-                    <button
-                        class="btn btn-small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
-                        toggle-target="#delete-confirm"
-                    >
-                        Delete
-                    </button>
-                </div>
-                <!-- overlay  -->
-            </div>
-            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
-        </div>
     </body>
 </html>
