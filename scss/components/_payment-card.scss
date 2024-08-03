@@ -1,0 +1,117 @@
+.payment-card {
+    // the cha co z-index khac auto -> luon thap hon the con 
+    position: relative;
+    z-index: 0;
+    
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+
+    border-radius: 10px;
+    background: var(--bg-color);
+
+    overflow: hidden;
+    user-select: none;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__type {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42;
+    }
+
+    &__number {
+        // position: relative;
+        // z-index: 1;
+        margin-top: 37px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1.75;
+    }
+
+    &__value {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    &__expired {
+        margin: 0 auto 0 40px;
+    }
+
+    &__circle {
+        --circle-width: 28px;
+
+        position: relative;
+        width: 42px;
+        height: var(--circle-width);
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+
+            width: var(--circle-width);
+            height: var(--circle-width);
+            border-radius: 50%;
+        }
+
+        &::before {
+            left: 0;
+            z-index: 1;
+            background: #f94545;
+            mix-blend-mode: hard-light;
+        }
+
+        &::after {
+            right: 0;
+            background: #ffb700;
+        }
+    }
+}
+
+.new-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+    height: 100%;
+
+    border-radius: 10px;
+    border: 1px dashed #d2d1d6;
+
+    &__text {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42;
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
