@@ -4142,6 +4142,7 @@ html.dark {
 .cart-item__content {
   flex: 1;
   display: flex;
+  align-items: center;
   align-self: flex-start;
 }
 @media (max-width: 767.98px) {
