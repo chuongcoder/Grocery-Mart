@@ -82,6 +82,12 @@
         border: 1px solid #d2d1d6;
     }
 
+    &--danger {
+        background-color:red;
+        color: #fff;
+
+    }
+
     &--rounded {
         border-radius: 99px;
     }

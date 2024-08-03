@@ -110,7 +110,10 @@
                                                         <img src="./assets/icons/heart-2.svg" alt="" />
                                                         Save
                                                     </button>
-                                                    <button class="cart-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                                                    <button
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img src="./assets/icons/trash.svg" alt="" />
                                                         Delete
                                                     </button>
@@ -141,7 +144,11 @@
                                                 <div class="cart-item__ctrl cart-item__ctrl--md-block">
                                                     <div class="cart-item__input">
                                                         LavAzza
-                                                        <img class="icon" src="./assets/icons/arrow-down-2.svg" alt="" />
+                                                        <img
+                                                            class="icon"
+                                                            src="./assets/icons/arrow-down-2.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="cart-item__input">
                                                         <button class="cart-item__input-btn">
@@ -161,7 +168,10 @@
                                                         <img src="./assets/icons/heart-2.svg" alt="" />
                                                         Save
                                                     </button>
-                                                    <button class="cart-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                                                    <button
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img src="./assets/icons/trash.svg" alt="" />
                                                         Delete
                                                     </button>
@@ -192,7 +202,11 @@
                                                 <div class="cart-item__ctrl cart-item__ctrl--md-block">
                                                     <div class="cart-item__input">
                                                         LavAzza
-                                                        <img class="icon" src="./assets/icons/arrow-down-2.svg" alt="" />
+                                                        <img
+                                                            class="icon"
+                                                            src="./assets/icons/arrow-down-2.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="cart-item__input">
                                                         <button class="cart-item__input-btn">
@@ -212,7 +226,10 @@
                                                         <img src="./assets/icons/heart-2.svg" alt="" />
                                                         Save
                                                     </button>
-                                                    <button class="cart-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                                                    <button
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img src="./assets/icons/trash.svg" alt="" />
                                                         Delete
                                                     </button>
@@ -304,18 +321,24 @@
             load("#footer", "./template/footer.html");
         </script>
 
-        <!-- Dialog / modal  -->
-        <div class="dialog hide" id="delete-confirm">
-            <div class="dialog__content">
-                <div class="dialog__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, omnis?
+        <!-- Modal: confirm remove shopping cart item -->
+        <div class="modal modal--small hide" id="delete-confirm">
+            <div class="modal__content">
+                <div class="modal__text">Do you want remove this item shopping cart ?</div>
+                <div class="modal__bottom">
+                    <button class="btn btn-small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn-small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Delete
+                    </button>
                 </div>
-                <div class="dialog__bottom">
-                    <button class="btn-small btn btn--text dialog__btn js-toggle" toggle-target="#delete-confirm">Cancel</button>
-                    <button class="btn-small btn btn--primary dialog__btn btn--no-margin js-toggle" toggle-target="#delete-confirm">Confirm</button>
-                </div>
+                <!-- overlay  -->
             </div>
-
-            <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
         </div>
     </body>
 </html>

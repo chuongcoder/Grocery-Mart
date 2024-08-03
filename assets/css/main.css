@@ -2647,6 +2647,10 @@ html.dark {
   background: transparent;
   border: 1px solid #d2d1d6;
 }
+.btn--danger {
+  background-color: red;
+  color: #fff;
+}
 .btn--rounded {
   border-radius: 99px;
 }
@@ -3067,6 +3071,12 @@ html.dark {
   }
 }
 @media (max-width: 575.98px) {
+  .form__search {
+    padding: 0 14px;
+    border: 1px solid #d2d1d6;
+    margin: 10px 30px 0;
+    border-radius: 10px;
+  }
   .form__search-icon {
     margin-left: 0;
   }
@@ -3981,10 +3991,20 @@ html.dark {
   background: var(--checkout-cart-info-bg);
   box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
 }
+.cart-info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cart-info__heading {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.41;
+}
+.cart-info__heading--lv2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.45;
 }
 .cart-info__sub-heading {
   margin: 30px 0;
@@ -4028,7 +4048,7 @@ html.dark {
 .cart-info__separate {
   margin: 30px 0;
   height: 1px;
-  background: var(--checkout-border-coler);
+  background: var(--checkout-border-color);
 }
 .cart-info__continue {
   display: flex;
@@ -4052,6 +4072,29 @@ html.dark {
 }
 .cart-info__next-btn {
   margin-top: 30px;
+}
+.cart-info__checkbox {
+  position: relative;
+}
+.cart-info__checkbox-input {
+  appearance: none;
+}
+.cart-info__checkbox-input::before {
+  content: url("../icons/checkbox-uncheck.svg");
+}
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url("../icons/checkbox-checked.svg");
+}
+.cart-info__form {
+  margin-bottom: 30px;
+}
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  line-height: 1.42;
 }
 
 .cart-info + .cart-info {
@@ -4305,20 +4348,54 @@ html.dark {
   display: flex;
   align-items: center;
 }
-.address-card__checkbox {
-  position: relative;
+
+.payment-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  background: #f6f6f6;
 }
-.address-card__checkbox-input {
-  appearance: none;
+.payment-item__content {
+  flex: 1;
 }
-.address-card__checkbox-input::before {
-  content: url("../icons/checkbox-uncheck.svg");
+.payment-item__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.45;
 }
-.address-card__checkbox-input:not(:checked)::before {
-  filter: var(--icon-color);
+.payment-item__desc, .payment-item__detail {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  line-height: 1.46;
 }
-.address-card__checkbox-input:checked::before {
-  content: url("../icons/checkbox-checked.svg");
+.payment-item__detail {
+  color: #0071dc;
+}
+.payment-item--pointer {
+  cursor: pointer;
+}
+.payment-item__thumb {
+  width: 70px;
+  height: 54px;
+  object-fit: contain;
+}
+.payment-item__checkbox {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 14px;
+}
+.payment-item__checkbox-input:checked + .payment-item__cost {
+  color: inherit;
+}
+.payment-item__cost {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.44;
+  color: #9e9da8;
 }
 
 /*# sourceMappingURL=main.css.map */
