@@ -3625,6 +3625,7 @@ html.dark {
   height: 100%;
   border-radius: 10px;
   border: 1px dashed #d2d1d6;
+  min-height: 170px;
 }
 .new-card__text {
   font-size: 1.4rem;
@@ -3641,16 +3642,17 @@ html.dark {
   padding: 10px;
   gap: 10px;
   border-radius: 10px;
-  background-color: var(--Background-2, #F6F6F6);
+  background-color: var(--account-info-bg);
 }
 .account-info__icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 54px;
   height: 54px;
   border-radius: 8px;
-  background: #fff;
+  background: var(--account-info-icon-bg);
 }
 .account-info__title {
   font-size: 1.5rem;
@@ -3665,12 +3667,16 @@ html.dark {
 
 .favourite-item {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .favourite-item__thumb {
-  width: 151px;
-  height: 108px;
-  object-fit: contain;
+  width: 110px;
+}
+@media (max-width: 991.98px) {
+  .favourite-item__thumb {
+    width: 80px;
+  }
 }
 .favourite-item__title {
   font-size: 1.5rem;
@@ -3682,6 +3688,12 @@ html.dark {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .favourite-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .favourite-item__price {
   font-size: 2.2rem;
@@ -4602,8 +4614,8 @@ html.dark {
 .profile__sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
-  background: #fff;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-sidebar-bg);
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
   overflow: hidden;
 }
 .profile-user {
@@ -4614,7 +4626,7 @@ html.dark {
   padding: 40px 20px 20px;
   align-items: center;
   background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url("../img/profile/cover.png") no-repeat center/cover;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
 }
 .profile-user__avatar {
   width: 121px;
@@ -4658,7 +4670,7 @@ html.dark {
   transition: background-color 0.5s;
 }
 .profile-menu__link:hover {
-  background: #ebebeb;
+  background: var(--profile-sidebar-link-hover);
 }
 .profile-menu__list {
   margin-top: 11px;

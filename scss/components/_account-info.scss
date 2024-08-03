@@ -4,18 +4,19 @@
     padding: 10px;
     gap: 10px;
     border-radius: 10px;
-    background-color: var(--Background-2, #F6F6F6);
+    background-color: var(--account-info-bg);
 
     &__icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
     width: 54px;
     height: 54px;
     border-radius: 8px;
 
-    background: #fff;
+    background: var(--account-info-icon-bg);
     }
 
     &__title {
