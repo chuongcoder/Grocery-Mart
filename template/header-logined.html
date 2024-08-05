@@ -5236,12 +5236,13 @@
 
             <!-- pair button  -->
             <div class="top-act__group d-md-none">
-                <!-- dropdown list favourate -->
-                <div class="top-act__btn-wrap" >
-                    <button class="top-act__btn  js-toggle" toggle-target="#act-dropdown-like">
+                <div class="top-act__btn-wrap">
+                    <button class="top-act__btn js-toggle" toggle-target="#act-dropdown-like">
                         <img src="./assets/icons/heart.svg" alt="" class="top-act__icon icon" />
                         <span class="top-act__title">03</span>
                     </button>
+
+                    <!-- dropdown list favourate -->
                     <div id="act-dropdown-like" class="act-dropdown-like hide">
                         <div class="act-dropdown__inner">
                             <img src="./assets/icons/arrow-up.png" alt="" class="act-dropdown__arrow" />
@@ -5312,7 +5313,9 @@
 
                             <!-- button  -->
                             <div class="act-dropdown__checkout">
-                                <a href="../favourite.html" class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
+                                <a
+                                    href="../favourite.html"
+                                    class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
                                     >Check Out All</a
                                 >
                             </div>
@@ -5320,14 +5323,14 @@
                     </div>
                 </div>
 
-                <div class="top-act__separate">
-                </div>
+                <div class="top-act__separate"></div>
 
                 <div class="top-action__btn-wrap">
                     <button class="top-act__btn js-toggle" toggle-target="#act-dropdown">
                         <img src="./assets/icons/buy.svg" alt="" class="top-act__icon icon" />
                         <span class="top-act__title">$65.42</span>
                     </button>
+
                     <!-- Dropdown cart buy icon -->
                     <div id="act-dropdown" class="act-dropdown hide">
                         <div class="act-dropdown__inner">
@@ -5411,14 +5414,16 @@
                                     <span class="act-dropdown__value">$10.00</span>
                                 </div>
 
-                                <div class="act-dr  pdown__row act-dropdown__row-bold">
+                                <div class="act-dr pdown__row act-dropdown__row-bold">
                                     <span class="act-dropdown__label">Total Price:</span>
                                     <span class="act-dropdown__value">$425.99</span>
                                 </div>
                             </div>
                             <!-- button  -->
                             <div class="act-dropdown__checkout">
-                                <a href="./checkout.html" class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
+                                <a
+                                    href="./checkout.html"
+                                    class="btn btn--primary btn--rounded act-dropdown__checkout-btn"
                                     >Check Out All</a
                                 >
                             </div>
@@ -5428,10 +5433,61 @@
             </div>
 
             <!-- avatar  -->
+            <!-- img avatar  -->
             <div class="top-act__user">
                 <a href="../profile.html">
                     <img src="./assets/img/user.jpg" alt="" class="top-act__avatar" />
                 </a>
+                <!-- Dropdown avatar -->
+                <div class="act-dropdown__avatar">
+                    <div class="act-dropdown__inner user-menu">
+                        <img
+                            src="./assets/icons/arrow-up.png"
+                            alt=""
+                            class="act-dropdown__arrow act-dropdown__arrow-avatar"
+                        />
+                        <div class="user-menu__top">
+                            <img src="../assets/img/user.jpg" alt="" class="user-menu__avatar" />
+                            <div>
+                                <p class="user-menu__name">Minh Chuong</p>
+                                <p class="user-menu__username">@Chuong</p>
+                            </div>
+                        </div>
+
+                        <ul class="user-menu__list">
+                            <li class="user-menu__link">
+                                <a href="./profile.html" class="user-menu__link">
+                                    <img src="./assets/icons/user.svg" alt="" class="icon user-menu__icon" />
+                                    Profile
+                                </a>
+                            </li>
+                            <li class="user-menu__link user-menu__separate">
+                                <a href="./favourite.html" class="user-menu__link">
+                                    <img src="./assets/icons/heart-avatar-dropdown.svg" alt="" class="icon user-menu__icon" />
+                                    Favourite list
+                                </a>
+                            </li>
+                            <li class="user-menu__link">
+                                <a href="#!" class="user-menu__link" id="switch-theme-btn">
+                                    <img src="./assets/icons/sun.svg" alt="" class="icon user-menu__icon" />
+                                   <span>Dark mode</span>
+                                </a>
+                            </li>
+                            <li class="user-menu__link user-menu__separate">
+                                <a href="#!" class="user-menu__link">
+                                    <img src="./assets/icons/setting-avatar-dropdown.svg" alt="" class="icon user-menu__icon" />
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="user-menu__link">
+                                <a href="./sign-in.html" class="user-menu__link">
+                                    <img src="./assets/icons/logout-avatar-dropdown.svg" alt="" class="icon user-menu__icon" />
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
